@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Bird Haven — Avian Ecommerce</title>
 </head>
 <body style="font-family: Arial, sans-serif; line-height: 1.6; margin: 40px;">
 
