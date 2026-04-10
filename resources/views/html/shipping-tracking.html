@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shipping & Tracking | Bird Haven</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary-container": "#77cefe", "on-background": "#191c1d",
+          "tertiary-fixed": "#b9ecee", "outline": "#6f787d",
+          "on-tertiary-fixed": "#002021", "on-secondary-container": "#536b3f",
+          "surface-container-high": "#e7e8e9", "surface-dim": "#d9dadb",
+          "on-tertiary-container": "#27585a", "surface-container-low": "#f3f4f5",
+          "secondary-fixed-dim": "#b3cf9a", "secondary-container": "#cfecb4",
+          "on-secondary-fixed": "#0c2000", "surface-bright": "#f8f9fa",
+          "tertiary-container": "#9bcdcf", "inverse-on-surface": "#f0f1f2",
+          "on-error": "#ffffff", "on-primary-container": "#005778",
+          "on-error-container": "#93000a", "surface-container": "#edeeef",
+          "on-primary": "#ffffff", "on-surface": "#191c1d",
+          "tertiary-fixed-dim": "#9ecfd1", "surface-variant": "#e1e3e4",
+          "on-primary-fixed": "#001e2c", "tertiary": "#356668",
+          "secondary-fixed": "#cfecb4", "surface": "#f8f9fa",
+          "surface-container-highest": "#e1e3e4", "primary": "#00658b",
+          "on-tertiary": "#ffffff", "primary-fixed": "#c4e7ff",
+          "on-surface-variant": "#3f484c", "surface-tint": "#00658b",
+          "surface-container-lowest": "#ffffff", "outline-variant": "#bfc8cd",
+          "on-secondary-fixed-variant": "#364d24", "error-container": "#ffdad6",
+          "primary-fixed-dim": "#7cd0ff", "error": "#ba1a1a",
+          "on-tertiary-fixed-variant": "#1a4e50", "secondary": "#4d653a",
+          "on-secondary": "#ffffff", "inverse-primary": "#7cd0ff",
+          "on-primary-fixed-variant": "#004c69", "inverse-surface": "#2e3132",
+          "background": "#f8f9fa"
+        },
+        fontFamily: { "headline": ["Manrope"], "body": ["Plus Jakarta Sans"], "label": ["Plus Jakarta Sans"] },
+        borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+      },
+    },
+  }
+</script>
+<style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  .smooth-glide-transition { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+  .glass-nav { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+  body { background-color: #f8f9fa; color: #191c1d; font-family: 'Plus Jakarta Sans', sans-serif; -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; }
+  h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+  .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+  .custom-scrollbar::-webkit-scrollbar-thumb { background: #bfc8cd; border-radius: 10px; }
+  .flight-path-line {
+    background: repeating-linear-gradient(to bottom, #00658b 0%, #00658b 50%, transparent 50%, transparent 100%);
+    background-size: 2px 12px;
+  }
+</style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+
+<!-- ===================== TOP NAV ===================== -->
+<!-- Desktop Nav -->
+<nav class="fixed top-0 w-full z-50 glass-nav bg-white/80 shadow-[0_20px_40px_rgba(25,28,29,0.06)] hidden md:block">
+  <div class="flex items-center justify-between px-12 py-4 max-w-[1440px] mx-auto w-full">
+    <div class="text-2xl font-bold tracking-tighter text-slate-900 font-headline">Bird Haven</div>
+    <div class="flex items-center gap-8">
+      <a class="text-slate-600 hover:text-slate-900 hover:-translate-y-0.5 transition-transform duration-300" href="#">Sanctuary</a>
+      <a class="text-slate-600 hover:text-slate-900 hover:-translate-y-0.5 transition-transform duration-300" href="#">Species</a>
+      <a class="text-slate-600 hover:text-slate-900 hover:-translate-y-0.5 transition-transform duration-300" href="#">Care</a>
+      <a class="text-slate-600 hover:text-slate-900 hover:-translate-y-0.5 transition-transform duration-300" href="#">Journal</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <button class="p-2 text-slate-600 hover:bg-surface-container rounded-full transition-colors">
+        <span class="material-symbols-outlined">person</span>
+      </button>
+      <button class="p-2 text-slate-600 hover:bg-surface-container rounded-full transition-colors relative">
+        <span class="material-symbols-outlined">shopping_bag</span>
+        <span class="absolute top-1 right-1 w-2 h-2 bg-primary rounded-full"></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<header class="md:hidden fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl px-6 py-4 flex items-center justify-between">
+  <button class="flex items-center justify-center p-2 rounded-full hover:bg-surface-container-low transition-colors">
+    <span class="material-symbols-outlined text-on-surface">arrow_back</span>
+  </button>
+  <div class="flex flex-col items-center">
+    <span class="text-[10px] uppercase tracking-widest text-outline font-semibold">Tracking Number</span>
+    <span class="font-headline font-bold text-on-surface tracking-tight">BH-7742-SKY-01</span>
+  </div>
+  <button class="flex items-center justify-center p-2 rounded-full hover:bg-surface-container-low transition-colors">
+    <span class="material-symbols-outlined text-on-surface">share</span>
+  </button>
+</header>
+
+<!-- ===================== DESKTOP MAIN ===================== -->
+<main class="hidden md:block pt-32 pb-20 px-12 max-w-[1440px] mx-auto">
+
+  <!-- Header -->
+  <header class="mb-16">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+      <div>
+        <span class="uppercase tracking-[0.2em] text-secondary font-bold text-xs mb-4 block">Secure Transit Dashboard</span>
+        <h1 class="text-6xl font-headline font-extrabold tracking-tight text-on-background max-w-2xl leading-[1.1]">
+          Climate-Controlled Journey
+        </h1>
+      </div>
+      <div class="bg-surface-container-low p-6 rounded-xl border-l-4 border-primary">
+        <p class="text-sm text-on-surface-variant mb-1">Tracking Number</p>
+        <p class="text-xl font-headline font-bold text-primary">AV-8829-XQL-2024</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Status Progress -->
+  <section class="mb-12">
+    <div class="bg-surface-container-lowest rounded-xl p-12 shadow-[0_20px_40px_rgba(25,28,29,0.06)] overflow-hidden relative">
+      <div class="absolute top-0 right-0 p-8 opacity-10">
+        <span class="material-symbols-outlined text-9xl">flutter_dash</span>
+      </div>
+      <div class="grid grid-cols-5 gap-4 relative z-10">
+        <!-- Step 1 -->
+        <div class="flex flex-col items-center text-center group">
+          <div class="w-14 h-14 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center mb-4 transition-transform group-hover:scale-110">
+            <span class="material-symbols-outlined">egg</span>
+          </div>
+          <p class="font-headline font-bold text-sm text-on-surface">Hatchery Preparation</p>
+          <p class="text-xs text-on-surface-variant mt-1">Completed - May 12</p>
+        </div>
+        <!-- Step 2 -->
+        <div class="flex flex-col items-center text-center group">
+          <div class="w-14 h-14 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center mb-4 transition-transform group-hover:scale-110">
+            <span class="material-symbols-outlined">health_and_safety</span>
+          </div>
+          <p class="font-headline font-bold text-sm text-on-surface">Health Clearance</p>
+          <p class="text-xs text-on-surface-variant mt-1">Completed - May 14</p>
+        </div>
+        <!-- Step 3 (Active) -->
+        <div class="flex flex-col items-center text-center group">
+          <div class="w-14 h-14 rounded-full bg-primary text-on-primary flex items-center justify-center mb-4 shadow-lg shadow-primary/30 animate-pulse transition-transform group-hover:scale-110">
+            <span class="material-symbols-outlined">flight</span>
+          </div>
+          <p class="font-headline font-bold text-sm text-primary">In Flight</p>
+          <p class="text-xs font-semibold text-primary mt-1">Current Stage</p>
+        </div>
+        <!-- Step 4 -->
+        <div class="flex flex-col items-center text-center group opacity-40">
+          <div class="w-14 h-14 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center mb-4 transition-transform group-hover:scale-110">
+            <span class="material-symbols-outlined">potted_plant</span>
+          </div>
+          <p class="font-headline font-bold text-sm">Local Sanctuary</p>
+          <p class="text-xs mt-1">Estimated - May 16</p>
+        </div>
+        <!-- Step 5 -->
+        <div class="flex flex-col items-center text-center group opacity-40">
+          <div class="w-14 h-14 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center mb-4 transition-transform group-hover:scale-110">
+            <span class="material-symbols-outlined">home_pin</span>
+          </div>
+          <p class="font-headline font-bold text-sm">Home Delivery</p>
+          <p class="text-xs mt-1">Estimated - May 17</p>
+        </div>
+      </div>
+
+      <!-- Telemetry Row -->
+      <div class="mt-12 flex flex-wrap items-center justify-between gap-8 pt-8 border-t border-surface-container">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-tertiary-container/30 flex items-center justify-center text-tertiary">
+            <span class="material-symbols-outlined">thermostat</span>
+          </div>
+          <div>
+            <p class="text-xs text-on-surface-variant">Cabin Temperature</p>
+            <p class="font-headline font-bold">24.5°C <span class="text-[10px] text-secondary font-medium tracking-wider uppercase ml-1">Stable</span></p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-primary-container/30 flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined">air</span>
+          </div>
+          <div>
+            <p class="text-xs text-on-surface-variant">Oxygen Levels</p>
+            <p class="font-headline font-bold">99.2% <span class="text-[10px] text-secondary font-medium tracking-wider uppercase ml-1">Optimal</span></p>
+          </div>
+        </div>
+        <div class="bg-surface-container-low px-6 py-3 rounded-full flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary text-sm">schedule</span>
+          <span class="text-sm font-semibold">Estimated Arrival: Friday, May 17 • 14:00 - 16:00</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map + Journey Log -->
+  <section class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <!-- Map -->
+    <div class="lg:col-span-2 bg-surface-container-low rounded-xl overflow-hidden min-h-[450px] relative shadow-sm">
+      <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/tracking.png')">
+        <div class="absolute inset-0 bg-primary/5"></div>
+      </div>
+      <div class="absolute top-6 left-6 z-10">
+        <div class="bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-lg flex items-center gap-4">
+          <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
+            <span class="material-symbols-outlined text-lg">flight</span>
+          </div>
+          <div>
+            <p class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant">Live Position</p>
+            <p class="text-sm font-bold">Over the Northern Atlantic</p>
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-6 right-6 z-10 flex gap-2">
+        <button class="bg-white p-3 rounded-full shadow-lg hover:bg-surface-container transition-colors">
+          <span class="material-symbols-outlined">add</span>
+        </button>
+        <button class="bg-white p-3 rounded-full shadow-lg hover:bg-surface-container transition-colors">
+          <span class="material-symbols-outlined">remove</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Journey Log + Support -->
+    <div class="flex flex-col gap-8">
+      <div class="bg-surface-container-highest rounded-xl p-6 flex-1 flex flex-col">
+        <h3 class="font-headline font-bold text-xl mb-6 flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary">history</span>Journey Log
+        </h3>
+        <div class="flex-1 space-y-6 custom-scrollbar overflow-y-auto pr-2">
+          <div class="relative pl-8 border-l-2 border-primary">
+            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary ring-4 ring-primary/20"></div>
+            <p class="text-xs text-on-surface-variant">May 15, 08:30 AM</p>
+            <p class="font-bold text-sm mt-1">Departed Regional Hub</p>
+            <p class="text-xs text-on-surface-variant mt-1">Flight BA-202 en route to Sanctuary Gateway.</p>
+          </div>
+          <div class="relative pl-8 border-l-2 border-secondary-container">
+            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-secondary-container"></div>
+            <p class="text-xs text-on-surface-variant">May 14, 14:15 PM</p>
+            <p class="font-bold text-sm mt-1">Final Avian Health Audit</p>
+            <p class="text-xs text-on-surface-variant mt-1">Vitals checked: Heart rate stable, hydration optimal.</p>
+          </div>
+          <div class="relative pl-8 border-l-2 border-secondary-container">
+            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-secondary-container"></div>
+            <p class="text-xs text-on-surface-variant">May 13, 09:00 AM</p>
+            <p class="font-bold text-sm mt-1">Transport Capsule Sealed</p>
+            <p class="text-xs text-on-surface-variant mt-1">Climate lock engaged. Primary oxygen reserves verified.</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-secondary-container/20 rounded-xl p-6 border border-secondary/10">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+            <span class="material-symbols-outlined">support_agent</span>
+          </div>
+          <div>
+            <h4 class="font-headline font-bold text-sm">Guardian Support</h4>
+            <p class="text-xs text-on-surface-variant mt-1 mb-4 leading-relaxed">Our specialists are monitoring your bird 24/7. Have questions about the journey?</p>
+            <button class="bg-white text-on-surface px-6 py-2 rounded-full text-xs font-bold hover:shadow-md transition-shadow">Chat with a Specialist</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guardian Standards -->
+  <section class="mt-20">
+    <h2 class="text-3xl font-headline font-extrabold mb-10">Guardian Standards</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-xl hover:shadow-xl transition-shadow duration-500">
+        <div class="w-16 h-16 rounded-2xl bg-tertiary-fixed mb-6 flex items-center justify-center text-on-tertiary-fixed">
+          <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">eco</span>
+        </div>
+        <h3 class="font-headline font-bold text-lg mb-2">Ethical Sourcing</h3>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Every bird is hatched in our humane, free-range sanctuaries with zero stress protocols.</p>
+      </div>
+      <div class="bg-white p-8 rounded-xl hover:shadow-xl transition-shadow duration-500">
+        <div class="w-16 h-16 rounded-2xl bg-primary-fixed mb-6 flex items-center justify-center text-on-primary-fixed">
+          <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+        </div>
+        <h3 class="font-headline font-bold text-lg mb-2">VET-First Logistics</h3>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Our shipping partners are certified avian handlers with on-call veterinary support throughout transit.</p>
+      </div>
+      <div class="bg-white p-8 rounded-xl hover:shadow-xl transition-shadow duration-500">
+        <div class="w-16 h-16 rounded-2xl bg-secondary-fixed mb-6 flex items-center justify-center text-on-secondary-fixed">
+          <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">ac_unit</span>
+        </div>
+        <h3 class="font-headline font-bold text-lg mb-2">Thermal Integrity</h3>
+        <p class="text-sm text-on-surface-variant leading-relaxed">We use proprietary bio-secure capsules that maintain a precise tropical micro-climate for 72 hours.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===================== MOBILE MAIN ===================== -->
+<main class="md:hidden pt-24 pb-32 px-6">
+
+  <!-- Status Card -->
+  <section class="bg-surface-container-lowest rounded-xl p-6 mb-8 shadow-[0_20px_40px_rgba(25,28,29,0.06)] border border-outline-variant/15">
+    <div class="flex justify-between items-start mb-6">
+      <div>
+        <h1 class="font-headline text-2xl font-extrabold text-on-surface tracking-tight mb-1">In Flight</h1>
+        <p class="text-on-surface-variant text-sm">Sanctuary Courier #402</p>
+      </div>
+      <div class="bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full text-xs font-bold tracking-wide flex items-center gap-2">
+        <span class="w-2 h-2 bg-secondary rounded-full animate-pulse"></span>
+        LIVE
+      </div>
+    </div>
+    <div class="flex items-center gap-4 py-4 bg-primary-container/10 rounded-lg px-4 border border-primary/10">
+      <div class="bg-primary text-on-primary p-3 rounded-full flex items-center justify-center">
+        <span class="material-symbols-outlined">schedule</span>
+      </div>
+      <div>
+        <p class="text-xs font-semibold text-primary uppercase tracking-wider">Estimated Arrival</p>
+        <p class="text-xl font-headline font-bold text-on-surface">Thursday, Oct 24 • 2:30 PM</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Flight Path -->
+  <section class="mb-10">
+    <h2 class="font-headline text-lg font-bold mb-6 flex items-center gap-2">
+      <span class="material-symbols-outlined text-primary">route</span>
+      Flight Path Status
+    </h2>
+    <div class="relative flex flex-col gap-8 ml-3">
+      <div class="absolute left-[11px] top-4 bottom-4 w-[2px] flight-path-line opacity-30"></div>
+      <!-- Step 1 -->
+      <div class="relative flex gap-6">
+        <div class="z-10 w-6 h-6 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
+          <span class="material-symbols-outlined text-white text-[14px]" style="font-variation-settings: 'FILL' 1;">check</span>
+        </div>
+        <div class="flex-1">
+          <p class="text-sm font-bold text-on-surface">Health Clearance Complete</p>
+          <p class="text-xs text-on-surface-variant">Central Sanctuary Facility • 08:00 AM</p>
+          <p class="mt-2 text-xs text-on-surface-variant leading-relaxed">Our avian specialists have confirmed peak health metrics for transport.</p>
+        </div>
+      </div>
+      <!-- Step 2 -->
+      <div class="relative flex gap-6">
+        <div class="z-10 w-6 h-6 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/20">
+          <span class="material-symbols-outlined text-white text-[14px]" style="font-variation-settings: 'FILL' 1;">check</span>
+        </div>
+        <div class="flex-1">
+          <p class="text-sm font-bold text-on-surface">Departure</p>
+          <p class="text-xs text-on-surface-variant">Regional Skyway Hub • 10:45 AM</p>
+        </div>
+      </div>
+      <!-- Step 3 (Active) -->
+      <div class="relative flex gap-6">
+        <div class="z-10 w-6 h-6 rounded-full border-2 border-primary bg-white flex items-center justify-center">
+          <div class="w-2 h-2 rounded-full bg-primary"></div>
+        </div>
+        <div class="flex-1">
+          <p class="text-sm font-bold text-primary">In Transit</p>
+          <p class="text-xs text-on-surface-variant">Climate-Controlled Express • Currently in Air</p>
+          <div class="mt-4 flex items-center gap-4 bg-surface-container-low p-3 rounded-lg border border-outline-variant/10">
+            <span class="material-symbols-outlined text-secondary">thermostat</span>
+            <span class="text-xs font-medium text-on-surface">Cabin Temp: <span class="font-bold">24°C</span> (Optimal)</span>
+          </div>
+        </div>
+      </div>
+      <!-- Step 4 (Pending) -->
+      <div class="relative flex gap-6 opacity-40">
+        <div class="z-10 w-6 h-6 rounded-full border-2 border-outline bg-white"></div>
+        <div class="flex-1">
+          <p class="text-sm font-bold text-on-surface">Guardian Handover</p>
+          <p class="text-xs text-on-surface-variant">Your Residential Zone • Expected 02:30 PM</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Map -->
+  <section class="mb-12">
+    <div class="flex justify-between items-end mb-4">
+      <h2 class="font-headline text-lg font-bold">Companion Location</h2>
+      <span class="text-xs font-semibold text-primary underline cursor-pointer">Refresh Map</span>
+    </div>
+    <div class="relative h-64 w-full rounded-xl overflow-hidden bg-surface-container shadow-inner border border-outline-variant/20">
+      <img class="w-full h-full object-cover grayscale-[20%] opacity-80"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuClm0He3tLg3dgqllNThsLjuIihDo8u13MrKy3pseV-uaAwzgPWFD-zhAikdUlBS6Bh71lhUmIifVUYzfOSqkpmDUtVzKBsHRrqJnjLIYfcT3G7iTHuZ4fMXvLQxs7vLh2e34tgibR1OR2fuVLJJFJrTeahLJnG1IcMBj0UAZPw-NWaZFIPatSmoW6salGMAW40_jPAKAEAjtRgBa0ihe599AnIVV7phQWdjn5MLd8nF5ZxRMJFC7uGwOiH3iQfGcobJim1eVSC7bGc"/>
+      <div class="absolute inset-0 flex items-center justify-center">
+        <div class="relative">
+          <div class="absolute -inset-8 bg-primary/20 rounded-full animate-ping"></div>
+          <div class="relative z-10 w-12 h-12 bg-white rounded-full p-1 shadow-2xl flex items-center justify-center border border-primary/20">
+            <div class="w-full h-full rounded-full overflow-hidden">
+              <img class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuANi4y2hMFvtYJ5jQqOwUnUzhFmqib9nA790E92BL3LxV9mg-egT71aIgg_M0ss4fUjWy6NbNnJYoYnM24qSgoX86q7ekRalCibdaCUfqG3J8Uy8bD6wUrRDbt9cCi46D1Zs9oM7CWZTkBCEv5YQPZuHJvyhJxGqQ3vNXVvUYYz3cv8y8fwney7r-FXkHX7jVBvWkEoDcx0xfhlK4DTcpf8MkiqhpzbCzhAPfurgvwta2Skc1jndrqtAcYi1F2nnKOJg9Sul96aEogH"/>
+            </div>
+          </div>
+          <div class="absolute -bottom-1 -right-1 w-4 h-4 bg-secondary rounded-full border-2 border-white"></div>
+        </div>
+      </div>
+      <div class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md p-3 rounded-lg flex items-center justify-between border border-white/50">
+        <div class="flex flex-col">
+          <span class="text-[10px] text-outline font-bold uppercase tracking-tighter">Current Location</span>
+          <span class="text-xs font-semibold">Oak Creek Valley Way</span>
+        </div>
+        <div class="text-[10px] text-primary font-bold">12 mi to destination</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Guardian Support -->
+  <section class="bg-secondary-container/30 rounded-xl p-6 border border-secondary/10">
+    <div class="flex items-center gap-4 mb-4">
+      <span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+      <h3 class="font-headline font-bold text-on-surface">Ethical Guardian Support</h3>
+    </div>
+    <p class="text-sm text-on-secondary-fixed-variant leading-relaxed mb-6">
+      Your avian companion is being transported by a certified ethical guardian. Temperature and stress levels are monitored in real-time.
+    </p>
+    <button class="w-full py-4 bg-white text-secondary font-bold rounded-lg border border-secondary/20 shadow-sm flex items-center justify-center gap-2 active:scale-95 smooth-glide-transition">
+      <span class="material-symbols-outlined text-sm">forum</span>
+      Message Courier
+    </button>
+  </section>
+</main>
+
+<!-- ===================== DESKTOP FOOTER ===================== -->
+<footer class="hidden md:block bg-slate-50 w-full pt-20 pb-12">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 max-w-[1440px] mx-auto">
+    <div class="md:col-span-1">
+      <div class="text-xl font-black text-slate-900 font-headline mb-4">Bird Haven</div>
+      <p class="text-slate-500 text-sm leading-relaxed">Providing the world's most ethical and transparent avian guardianship experience since 2021.</p>
+    </div>
+    <div class="flex flex-col gap-4">
+      <h4 class="font-bold text-sky-800">Quick Links</h4>
+      <a class="text-slate-500 hover:text-sky-600 transition-opacity text-sm" href="#">Privacy Policy</a>
+      <a class="text-slate-500 hover:text-sky-600 transition-opacity text-sm" href="#">Ethical Sourcing</a>
+      <a class="text-sky-700 underline text-sm" href="#">Shipping</a>
+      <a class="text-slate-500 hover:text-sky-600 transition-opacity text-sm" href="#">Contact</a>
+    </div>
+    <div class="flex flex-col gap-4">
+      <h4 class="font-bold text-sky-800">Care Center</h4>
+      <a class="text-slate-500 hover:text-sky-600 transition-opacity text-sm" href="#">Nutritional Guides</a>
+      <a class="text-slate-500 hover:text-sky-600 transition-opacity text-sm" href="#">Habitat Design</a>
+      <a class="text-slate-500 hover:text-sky-600 transition-opacity text-sm" href="#">Health Insurance</a>
+    </div>
+    <div class="flex flex-col gap-4">
+      <h4 class="font-bold text-sky-800">Newsletter</h4>
+      <div class="flex">
+        <input class="bg-white border-none rounded-l-lg text-sm w-full focus:ring-1 focus:ring-primary outline-none px-4 py-3" placeholder="Guardian Email" type="email"/>
+        <button class="bg-primary text-white px-4 rounded-r-lg">
+          <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-[1440px] mx-auto px-12 mt-16 pt-8 border-t border-slate-200">
+    <p class="text-slate-400 text-xs text-center">© 2024 Bird Haven. Ethical Avian Guardianship.</p>
+  </div>
+</footer>
+
+<!-- ===================== MOBILE BOTTOM NAV ===================== -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 pb-8 pt-4 bg-white/90 backdrop-blur-xl rounded-t-[3rem] shadow-[0_-10px_30px_rgba(0,0,0,0.04)]">
+  <button class="flex flex-col items-center justify-center text-slate-500 active:scale-95 smooth-glide-transition">
+    <span class="material-symbols-outlined">home</span>
+    <span class="text-[11px] font-medium mt-1">Home</span>
+  </button>
+  <button class="flex flex-col items-center justify-center text-slate-500 active:scale-95 smooth-glide-transition">
+    <span class="material-symbols-outlined">search</span>
+    <span class="text-[11px] font-medium mt-1">Search</span>
+  </button>
+  <button class="flex flex-col items-center justify-center bg-sky-100 text-sky-800 rounded-full px-5 py-2 active:scale-95 smooth-glide-transition">
+    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">flutter_dash</span>
+    <span class="text-[11px] font-medium mt-1">Birds</span>
+  </button>
+  <button class="flex flex-col items-center justify-center text-slate-500 active:scale-95 smooth-glide-transition">
+    <span class="material-symbols-outlined">person</span>
+    <span class="text-[11px] font-medium mt-1">Profile</span>
+  </button>
+</nav>
+
+</body>
+</html>

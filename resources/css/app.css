@@ -1,0 +1,102 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+/* ── Dark mode: class strategy ─────────────────────────────────────────── */
+@variant dark (&:is(.dark *));
+
+/* ── Theme ──────────────────────────────────────────────────────────────── */
+@theme {
+    /* Fonts */
+    --font-headline: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+    --font-body:     'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-label:    'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+
+    /* Border radius */
+    --radius:    1rem;
+    --radius-lg: 2rem;
+    --radius-xl: 3rem;
+
+    /* Colors */
+    --color-primary:                    #00658b;
+    --color-on-primary:                 #ffffff;
+    --color-primary-container:          #77cefe;
+    --color-on-primary-container:       #005778;
+    --color-primary-fixed:              #c4e7ff;
+    --color-primary-fixed-dim:          #7cd0ff;
+    --color-on-primary-fixed:           #001e2c;
+    --color-on-primary-fixed-variant:   #004c69;
+    --color-inverse-primary:            #7cd0ff;
+
+    --color-secondary:                  #4d653a;
+    --color-on-secondary:               #ffffff;
+    --color-secondary-container:        #cfecb4;
+    --color-on-secondary-container:     #536b3f;
+    --color-secondary-fixed:            #cfecb4;
+    --color-secondary-fixed-dim:        #b3cf9a;
+    --color-on-secondary-fixed:         #0c2000;
+    --color-on-secondary-fixed-variant: #364d24;
+
+    --color-tertiary:                   #356668;
+    --color-on-tertiary:                #ffffff;
+    --color-tertiary-container:         #9bcdcf;
+    --color-on-tertiary-container:      #27585a;
+    --color-tertiary-fixed:             #b9ecee;
+    --color-tertiary-fixed-dim:         #9ecfd1;
+    --color-on-tertiary-fixed:          #002021;
+    --color-on-tertiary-fixed-variant:  #1a4e50;
+
+    --color-error:                      #ba1a1a;
+    --color-on-error:                   #ffffff;
+    --color-error-container:            #ffdad6;
+    --color-on-error-container:         #93000a;
+
+    --color-surface:                    #f8f9fa;
+    --color-on-surface:                 #191c1d;
+    --color-surface-variant:            #e1e3e4;
+    --color-on-surface-variant:         #3f484c;
+    --color-surface-dim:                #d9dadb;
+    --color-surface-bright:             #f8f9fa;
+    --color-surface-tint:               #00658b;
+    --color-surface-container-lowest:   #ffffff;
+    --color-surface-container-low:      #f3f4f5;
+    --color-surface-container:          #edeeef;
+    --color-surface-container-high:     #e7e8e9;
+    --color-surface-container-highest:  #e1e3e4;
+    --color-inverse-surface:            #2e3132;
+    --color-inverse-on-surface:         #f0f1f2;
+
+    --color-outline:                    #6f787d;
+    --color-outline-variant:            #bfc8cd;
+    --color-background:                 #f8f9fa;
+    --color-on-background:              #191c1d;
+}
+
+/* ── Global base styles ─────────────────────────────────────────────────── */
+@layer base {
+    body {
+        -webkit-font-smoothing: antialiased;
+        background-color: #f8f9fa;
+    }
+
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+}
+
+/* ── Utilities ──────────────────────────────────────────────────────────── */
+@layer utilities {
+    .ethereal-shadow {
+        box-shadow: 0 20px 40px rgba(25, 28, 29, 0.06);
+    }
+
+    .bg-gradient-primary {
+        background: linear-gradient(135deg, #00658b 0%, #77cefe 100%);
+    }
+
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}

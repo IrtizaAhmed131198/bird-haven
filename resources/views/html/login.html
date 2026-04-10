@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bird Haven | Join the Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "on-primary": "#ffffff", "secondary": "#4d653a", "surface-tint": "#00658b",
+          "on-tertiary-fixed": "#002021", "surface-container-lowest": "#ffffff",
+          "on-primary-container": "#005778", "tertiary-container": "#9bcdcf",
+          "primary-fixed": "#c4e7ff", "on-tertiary-fixed-variant": "#1a4e50",
+          "on-secondary-fixed": "#0c2000", "on-error-container": "#93000a",
+          "on-surface": "#191c1d", "outline": "#6f787d",
+          "on-secondary-fixed-variant": "#364d24", "surface-dim": "#d9dadb",
+          "secondary-container": "#cfecb4", "on-primary-fixed-variant": "#004c69",
+          "surface-bright": "#f8f9fa", "on-tertiary-container": "#27585a",
+          "outline-variant": "#bfc8cd", "error": "#ba1a1a", "surface": "#f8f9fa",
+          "secondary-fixed": "#cfecb4", "inverse-primary": "#7cd0ff",
+          "tertiary-fixed": "#b9ecee", "inverse-on-surface": "#f0f1f2",
+          "on-primary-fixed": "#001e2c", "secondary-fixed-dim": "#b3cf9a",
+          "tertiary": "#356668", "primary": "#00658b", "inverse-surface": "#2e3132",
+          "primary-fixed-dim": "#7cd0ff", "primary-container": "#77cefe",
+          "surface-container-highest": "#e1e3e4", "on-secondary": "#ffffff",
+          "tertiary-fixed-dim": "#9ecfd1", "on-error": "#ffffff",
+          "surface-container-high": "#e7e8e9", "on-surface-variant": "#3f484c",
+          "on-tertiary": "#ffffff", "error-container": "#ffdad6",
+          "background": "#f8f9fa", "on-background": "#191c1d",
+          "surface-variant": "#e1e3e4", "surface-container": "#edeeef",
+          "surface-container-low": "#f3f4f5", "on-secondary-container": "#536b3f"
+        },
+        fontFamily: { "headline": ["Manrope"], "body": ["Plus Jakarta Sans"], "label": ["Plus Jakarta Sans"] },
+        borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+      },
+    },
+  }
+</script>
+<style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  .smooth-glide-transition { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+  body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8f9fa; -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; }
+  h1, h2, h3, h4, h5 { font-family: 'Manrope', sans-serif; }
+  .bg-gradient-primary { background: linear-gradient(135deg, #00658b 0%, #77cefe 100%); }
+</style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed">
+
+<!-- ===================== DESKTOP LAYOUT ===================== -->
+<div class="hidden md:block">
+  <div class="relative min-h-screen flex flex-col overflow-hidden">
+
+    <!-- Background -->
+    <div class="absolute inset-0 z-0">
+      <img alt="" class="w-full h-full object-cover opacity-10 blur-[2px]"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeR3cAAcOpbbGsrvJD4v0ZxdMjBGIWV4GFxeN7vofCQRqANuz3fS2chl4KqA1GphsHn92wfHjA19wLjjtN6TORtNqAOdh4hQihd6SH6q-D2Uu-6_b1ZoPTi-Kr3-wzbDMCtkw5dfoX2cvzW26mMiv589Nb1qJ-ePIGGnak1Zhh7IH6DAR1K1iESPAcMIdOzEaTv7Ypm5eV9sFltxNfjBJQvPOL8mPx3-wjZezzuZB97GjSCRryM3oSH-BHLGn2Kp4eLlmH2W9Sd0Fv"/>
+      <div class="absolute inset-0 bg-gradient-to-tr from-surface via-transparent to-primary/5"></div>
+    </div>
+
+    <!-- Main content -->
+    <div class="relative z-10 flex-1 flex items-center justify-center py-12 px-4">
+      <div class="w-full max-w-[1100px] flex flex-col md:flex-row gap-8 items-stretch">
+
+        <!-- Left: Brand & Feature Panel -->
+        <div class="hidden md:flex flex-col justify-between w-1/2 p-12">
+          <div class="space-y-6">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-primary text-4xl">flutter_dash</span>
+              <h1 class="font-headline font-extrabold text-2xl tracking-tighter text-on-surface">Bird Haven</h1>
+            </div>
+            <div class="space-y-4 pt-8">
+              <h2 class="font-headline text-5xl font-bold leading-tight tracking-tight text-on-surface">
+                Where ethical <br/><span class="text-primary italic">guardianship</span> begins.
+              </h2>
+              <p class="text-on-surface-variant text-lg max-w-md leading-relaxed">
+                Join our global collective of avian enthusiasts. Access expert care journals, species documentation, and the curated sanctuary marketplace.
+              </p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-white/40 p-6 rounded-lg backdrop-blur-sm border border-white/20">
+              <span class="material-symbols-outlined text-secondary text-3xl mb-3">auto_awesome</span>
+              <h4 class="font-semibold text-on-surface">Curated Species</h4>
+              <p class="text-sm text-on-surface-variant">Detailed data for 500+ birds.</p>
+            </div>
+            <div class="bg-white/40 p-6 rounded-lg backdrop-blur-sm border border-white/20">
+              <span class="material-symbols-outlined text-primary text-3xl mb-3">verified_user</span>
+              <h4 class="font-semibold text-on-surface">Ethical Sourcing</h4>
+              <p class="text-sm text-on-surface-variant">Every action supports conservation.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Auth Form Card -->
+        <div class="w-full md:w-1/2 flex items-center">
+          <div class="w-full bg-surface-container-lowest rounded-xl p-8 md:p-12 shadow-[0_20px_40px_rgba(25,28,29,0.06)] border border-outline-variant/10">
+            <!-- Tab Toggle -->
+            <div class="flex items-center justify-between mb-10 bg-surface-container-low p-1.5 rounded-full">
+              <button class="flex-1 py-3 px-6 rounded-full font-semibold transition-all duration-300 text-on-primary bg-primary shadow-sm" id="desktop-tab-login">
+                Sign In
+              </button>
+              <button class="flex-1 py-3 px-6 rounded-full font-semibold transition-all duration-300 text-on-surface-variant hover:text-on-surface" id="desktop-tab-register">
+                Create Account
+              </button>
+            </div>
+
+            <!-- Login Form -->
+            <div class="space-y-6" id="desktop-login-form">
+              <header>
+                <h3 class="font-headline text-2xl font-bold text-on-surface">Welcome Back</h3>
+                <p class="text-on-surface-variant text-sm mt-1">Enter your credentials to access the archive.</p>
+              </header>
+              <div class="space-y-4">
+                <div class="space-y-2">
+                  <label class="text-sm font-medium text-on-surface-variant ml-1">Email Address</label>
+                  <div class="relative">
+                    <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">mail</span>
+                    <input class="w-full pl-12 pr-4 py-3.5 bg-surface-container rounded-md border-none ring-1 ring-outline-variant/20 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none text-on-surface" placeholder="alex@aviary.com" type="email"/>
+                  </div>
+                </div>
+                <div class="space-y-2">
+                  <div class="flex justify-between items-center ml-1">
+                    <label class="text-sm font-medium text-on-surface-variant">Password</label>
+                    <a class="text-xs text-primary hover:underline font-medium" href="#">Forgot?</a>
+                  </div>
+                  <div class="relative">
+                    <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">lock</span>
+                    <input class="w-full pl-12 pr-4 py-3.5 bg-surface-container rounded-md border-none ring-1 ring-outline-variant/20 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none text-on-surface" placeholder="••••••••" type="password"/>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-2 py-2">
+                <input class="w-4 h-4 rounded text-primary focus:ring-primary border-outline-variant" id="remember" type="checkbox"/>
+                <label class="text-sm text-on-surface-variant" for="remember">Keep me signed in for 30 days</label>
+              </div>
+              <button class="w-full bg-gradient-primary text-on-primary font-bold py-4 rounded-full shadow-lg shadow-primary/20 hover:scale-[1.01] active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-2">
+                <span>Continue to Archive</span>
+                <span class="material-symbols-outlined text-lg">arrow_forward</span>
+              </button>
+              <div class="relative flex items-center py-4">
+                <div class="flex-grow border-t border-outline-variant/20"></div>
+                <span class="flex-shrink mx-4 text-xs text-outline font-medium uppercase tracking-widest">Or Secure Login with</span>
+                <div class="flex-grow border-t border-outline-variant/20"></div>
+              </div>
+              <div class="grid grid-cols-2 gap-4">
+                <button class="flex items-center justify-center gap-2 py-3 bg-white border border-outline-variant/20 rounded-md hover:bg-surface-container-low transition-colors">
+                  <img alt="Google" class="w-5 h-5"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx8HLK4zAkfE3ER4UUoGMucQkZ0femb74QrBdY7WGlIc6vrQ-V9HWBzdOKNRKO8zJlP3He4_n4UdWKMPxqy9IjLpHLoG9JViOOl9VLh2u90IOsrXlwPU2uD8E6-WryNjfQXTRnOAqPSza1Vy-Y1BKOAbMqFLkBt4Iwhj6Y2jWOmKGtU0joqmJAvYcM9L7Vx4jIut9vjkDFJwSafWBiTHtuu5RpwjDiusz-7SFdNXAdmexXibYpsMZm970NQVdjHmKKCQ-bLdzXSOnu"/>
+                  <span class="text-sm font-medium text-on-surface">Google</span>
+                </button>
+                <button class="flex items-center justify-center gap-2 py-3 bg-white border border-outline-variant/20 rounded-md hover:bg-surface-container-low transition-colors">
+                  <span class="material-symbols-outlined text-on-surface" style="font-variation-settings: 'FILL' 1;">ios</span>
+                  <span class="text-sm font-medium text-on-surface">Apple</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Register Form (hidden by default) -->
+            <div class="space-y-6 hidden" id="desktop-register-form">
+              <header>
+                <h3 class="font-headline text-2xl font-bold text-on-surface">Create Your Account</h3>
+                <p class="text-on-surface-variant text-sm mt-1">Join the sanctuary and begin your ethical journey.</p>
+              </header>
+              <div class="space-y-4">
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="space-y-2">
+                    <label class="text-sm font-medium text-on-surface-variant ml-1">First Name</label>
+                    <input class="w-full px-4 py-3.5 bg-surface-container rounded-md border-none ring-1 ring-outline-variant/20 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none" placeholder="Alex" type="text"/>
+                  </div>
+                  <div class="space-y-2">
+                    <label class="text-sm font-medium text-on-surface-variant ml-1">Last Name</label>
+                    <input class="w-full px-4 py-3.5 bg-surface-container rounded-md border-none ring-1 ring-outline-variant/20 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none" placeholder="Vogel" type="text"/>
+                  </div>
+                </div>
+                <div class="space-y-2">
+                  <label class="text-sm font-medium text-on-surface-variant ml-1">Email Address</label>
+                  <div class="relative">
+                    <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">mail</span>
+                    <input class="w-full pl-12 pr-4 py-3.5 bg-surface-container rounded-md border-none ring-1 ring-outline-variant/20 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none" placeholder="alex@aviary.com" type="email"/>
+                  </div>
+                </div>
+                <div class="space-y-2">
+                  <label class="text-sm font-medium text-on-surface-variant ml-1">Password</label>
+                  <div class="relative">
+                    <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">lock</span>
+                    <input class="w-full pl-12 pr-4 py-3.5 bg-surface-container rounded-md border-none ring-1 ring-outline-variant/20 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none" placeholder="Create a strong password" type="password"/>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-2 py-1">
+                <input class="w-4 h-4 rounded text-primary focus:ring-primary border-outline-variant" type="checkbox"/>
+                <label class="text-sm text-on-surface-variant">I agree to the <a class="text-primary underline" href="#">Ethical Care Agreement</a> and <a class="text-primary underline" href="#">Privacy Policy</a></label>
+              </div>
+              <button class="w-full bg-gradient-primary text-on-primary font-bold py-4 rounded-full shadow-lg shadow-primary/20 hover:scale-[1.01] active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-2">
+                <span>Join the Sanctuary</span>
+                <span class="material-symbols-outlined text-lg">arrow_forward</span>
+              </button>
+              <div class="relative flex items-center py-4">
+                <div class="flex-grow border-t border-outline-variant/20"></div>
+                <span class="flex-shrink mx-4 text-xs text-outline font-medium uppercase tracking-widest">Or sign up with</span>
+                <div class="flex-grow border-t border-outline-variant/20"></div>
+              </div>
+              <div class="grid grid-cols-2 gap-4">
+                <button class="flex items-center justify-center gap-2 py-3 bg-white border border-outline-variant/20 rounded-md hover:bg-surface-container-low transition-colors">
+                  <img alt="Google" class="w-5 h-5"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx8HLK4zAkfE3ER4UUoGMucQkZ0femb74QrBdY7WGlIc6vrQ-V9HWBzdOKNRKO8zJlP3He4_n4UdWKMPxqy9IjLpHLoG9JViOOl9VLh2u90IOsrXlwPU2uD8E6-WryNjfQXTRnOAqPSza1Vy-Y1BKOAbMqFLkBt4Iwhj6Y2jWOmKGtU0joqmJAvYcM9L7Vx4jIut9vjkDFJwSafWBiTHtuu5RpwjDiusz-7SFdNXAdmexXibYpsMZm970NQVdjHmKKCQ-bLdzXSOnu"/>
+                  <span class="text-sm font-medium text-on-surface">Google</span>
+                </button>
+                <button class="flex items-center justify-center gap-2 py-3 bg-white border border-outline-variant/20 rounded-md hover:bg-surface-container-low transition-colors">
+                  <span class="material-symbols-outlined text-on-surface" style="font-variation-settings: 'FILL' 1;">ios</span>
+                  <span class="text-sm font-medium text-on-surface">Apple</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desktop Footer -->
+    <footer class="relative z-10 bg-slate-50 w-full pt-20 pb-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 max-w-[1440px] mx-auto">
+        <div class="space-y-4">
+          <div class="text-xl font-black text-slate-900 font-headline">Bird Haven</div>
+          <p class="text-slate-500 text-sm">Empowering ethical avian enthusiasts with high-fidelity knowledge and community sanctuary.</p>
+        </div>
+        <div class="space-y-4">
+          <h5 class="text-sky-800 font-bold text-sm">Sanctuary</h5>
+          <ul class="space-y-2">
+            <li><a class="text-slate-500 hover:text-sky-600 text-sm" href="#">Species Database</a></li>
+            <li><a class="text-slate-500 hover:text-sky-600 text-sm" href="#">Care Guidelines</a></li>
+            <li><a class="text-slate-500 hover:text-sky-600 text-sm" href="#">The Marketplace</a></li>
+          </ul>
+        </div>
+        <div class="space-y-4">
+          <h5 class="text-sky-800 font-bold text-sm">Support</h5>
+          <ul class="space-y-2">
+            <li><a class="text-slate-500 hover:text-sky-600 text-sm" href="#">Contact</a></li>
+            <li><a class="text-slate-500 hover:text-sky-600 text-sm" href="#">Shipping</a></li>
+            <li><a class="text-slate-500 hover:text-sky-600 text-sm" href="#">Ethical Sourcing</a></li>
+          </ul>
+        </div>
+        <div class="space-y-4">
+          <h5 class="text-sky-800 font-bold text-sm">Legal</h5>
+          <ul class="space-y-2">
+            <li><a class="text-slate-500 hover:text-sky-600 text-sm" href="#">Privacy Policy</a></li>
+            <li><a class="text-slate-500 hover:text-sky-600 text-sm" href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="max-w-[1440px] mx-auto px-12 mt-12 pt-8 border-t border-slate-200/50">
+        <p class="text-slate-500 text-sm text-center">© 2024 Bird Haven. Ethical Avian Guardianship.</p>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<!-- ===================== MOBILE LAYOUT ===================== -->
+<main class="md:hidden min-h-screen flex flex-col px-6 pt-12 pb-10 max-w-[390px] mx-auto overflow-x-hidden">
+
+  <!-- Brand & Illustration -->
+  <section class="flex flex-col items-center mb-10">
+    <div class="relative w-64 h-64 mb-6">
+      <div class="absolute inset-0 bg-primary-container/20 rounded-full blur-3xl"></div>
+      <img alt="Bird Illustration" class="relative w-full h-full object-contain drop-shadow-2xl z-10"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdCviaiF2eVvWpD6B_XWLDw7zJW69lyskKElWrhEW7U03832C-zj6p3htRa51Y-iKBAPEWgR2U22v3yIkHKqTzXC6n5oddaavYWrWHoHrXeDkifRnEk2TGaHAtSut3m6puFchd5SbjvsBAw_6jca9TQ2C1WZzFK8RlGzbqRiUQHFpclqcdeTFHI1EXjqK6u-RfYuGLndh-WEh_txdlhn53JqRxWgcAvqtq_Hmx7pVJe5P46iMtDtsEiaqibFjFdgGQEfNvWxvmrt_6"/>
+    </div>
+    <div class="text-center">
+      <h1 class="font-headline text-3xl font-extrabold tracking-tighter text-on-surface leading-tight mb-2">Bird Haven</h1>
+      <p class="text-on-surface-variant text-sm font-medium tracking-wide opacity-80">Ethical Avian Guardianship</p>
+    </div>
+  </section>
+
+  <!-- Mobile Auth Form -->
+  <div class="flex-grow flex flex-col gap-6">
+    <div class="flex flex-col gap-4">
+      <div class="space-y-1">
+        <label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant px-2" for="m-email">Email Address</label>
+        <div class="relative">
+          <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline-variant">mail</span>
+          <input class="w-full pl-12 pr-4 py-4 bg-surface-container-lowest border-none rounded-xl focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline-variant shadow-sm transition-all duration-300 outline-none" id="m-email" placeholder="guardian@sanctuary.org" type="email"/>
+        </div>
+      </div>
+      <div class="space-y-1">
+        <label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant px-2" for="m-password">Secret Key</label>
+        <div class="relative">
+          <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline-variant">lock</span>
+          <input class="w-full pl-12 pr-4 py-4 bg-surface-container-lowest border-none rounded-xl focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline-variant shadow-sm transition-all duration-300 outline-none" id="m-password" placeholder="••••••••" type="password"/>
+        </div>
+      </div>
+      <div class="flex justify-end px-2">
+        <a class="text-xs font-semibold text-primary hover:text-surface-tint transition-colors" href="#">Forgot your key?</a>
+      </div>
+    </div>
+
+    <!-- Mobile Action Buttons -->
+    <div class="flex flex-col gap-4 mt-4">
+      <button class="w-full py-5 bg-gradient-to-br from-primary to-primary-container text-on-primary font-headline font-bold text-lg rounded-full shadow-[0_10px_25px_rgba(0,101,139,0.25)] active:scale-95 transition-all duration-300">
+        Sign In to Sanctuary
+      </button>
+      <div class="flex items-center gap-4 px-4 py-2">
+        <div class="h-[1px] flex-grow bg-outline-variant/30"></div>
+        <span class="text-xs font-bold text-outline uppercase tracking-tighter">or create a nest</span>
+        <div class="h-[1px] flex-grow bg-outline-variant/30"></div>
+      </div>
+      <button class="w-full py-5 bg-surface-container-high text-on-surface font-headline font-bold text-lg rounded-full active:scale-95 transition-all duration-300">
+        Join the Collective
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Social + Legal -->
+  <footer class="mt-12">
+    <div class="flex justify-center gap-8 text-on-surface-variant">
+      <button class="w-14 h-14 flex items-center justify-center rounded-full bg-surface-container-low hover:bg-surface-container-high transition-colors">
+        <span class="material-symbols-outlined text-2xl">google</span>
+      </button>
+      <button class="w-14 h-14 flex items-center justify-center rounded-full bg-surface-container-low hover:bg-surface-container-high transition-colors">
+        <span class="material-symbols-outlined text-2xl">ios</span>
+      </button>
+    </div>
+    <div class="mt-10 text-center">
+      <p class="text-[11px] text-outline leading-relaxed max-w-[240px] mx-auto">
+        By proceeding, you agree to our <a class="underline" href="#">Ethical Sourcing Protocol</a> and <a class="underline" href="#">Guardian Privacy Policy</a>.
+      </p>
+    </div>
+  </footer>
+</main>
+
+<!-- ===================== MOBILE: Bottom Nav ===================== -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 pb-8 pt-4 bg-white/90 backdrop-blur-xl shadow-[0_-10px_30px_rgba(0,0,0,0.04)] rounded-t-[3rem]">
+  <div class="flex flex-col items-center justify-center text-slate-500">
+    <span class="material-symbols-outlined">home</span>
+    <span class="text-[11px] font-medium mt-1">Home</span>
+  </div>
+  <div class="flex flex-col items-center justify-center text-slate-500">
+    <span class="material-symbols-outlined">search</span>
+    <span class="text-[11px] font-medium mt-1">Search</span>
+  </div>
+  <div class="flex flex-col items-center justify-center text-slate-500">
+    <span class="material-symbols-outlined">flutter_dash</span>
+    <span class="text-[11px] font-medium mt-1">Birds</span>
+  </div>
+  <div class="flex flex-col items-center justify-center bg-sky-100 text-sky-800 rounded-full px-5 py-2">
+    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+    <span class="text-[11px] font-medium mt-1">Profile</span>
+  </div>
+</nav>
+
+<!-- ===================== TAB SWITCH SCRIPT ===================== -->
+<script>
+  const loginTab = document.getElementById('desktop-tab-login');
+  const registerTab = document.getElementById('desktop-tab-register');
+  const loginForm = document.getElementById('desktop-login-form');
+  const registerForm = document.getElementById('desktop-register-form');
+
+  function showLogin() {
+    loginForm.classList.remove('hidden');
+    registerForm.classList.add('hidden');
+    loginTab.classList.add('text-on-primary', 'bg-primary', 'shadow-sm');
+    loginTab.classList.remove('text-on-surface-variant', 'hover:text-on-surface');
+    registerTab.classList.remove('text-on-primary', 'bg-primary', 'shadow-sm');
+    registerTab.classList.add('text-on-surface-variant', 'hover:text-on-surface');
+  }
+
+  function showRegister() {
+    registerForm.classList.remove('hidden');
+    loginForm.classList.add('hidden');
+    registerTab.classList.add('text-on-primary', 'bg-primary', 'shadow-sm');
+    registerTab.classList.remove('text-on-surface-variant', 'hover:text-on-surface');
+    loginTab.classList.remove('text-on-primary', 'bg-primary', 'shadow-sm');
+    loginTab.classList.add('text-on-surface-variant', 'hover:text-on-surface');
+  }
+
+  loginTab.addEventListener('click', showLogin);
+  registerTab.addEventListener('click', showRegister);
+</script>
+
+</body>
+</html>

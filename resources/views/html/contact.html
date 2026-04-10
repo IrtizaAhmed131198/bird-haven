@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact - Bird Haven</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "on-primary": "#ffffff", "secondary": "#4d653a", "surface-tint": "#00658b",
+          "on-tertiary-fixed": "#002021", "surface-container-lowest": "#ffffff",
+          "on-primary-container": "#005778", "tertiary-container": "#9bcdcf",
+          "primary-fixed": "#c4e7ff", "on-tertiary-fixed-variant": "#1a4e50",
+          "on-secondary-fixed": "#0c2000", "on-error-container": "#93000a",
+          "on-surface": "#191c1d", "outline": "#6f787d",
+          "on-secondary-fixed-variant": "#364d24", "surface-dim": "#d9dadb",
+          "secondary-container": "#cfecb4", "on-primary-fixed-variant": "#004c69",
+          "surface-bright": "#f8f9fa", "on-tertiary-container": "#27585a",
+          "outline-variant": "#bfc8cd", "error": "#ba1a1a", "surface": "#f8f9fa",
+          "secondary-fixed": "#cfecb4", "inverse-primary": "#7cd0ff",
+          "tertiary-fixed": "#b9ecee", "inverse-on-surface": "#f0f1f2",
+          "on-primary-fixed": "#001e2c", "secondary-fixed-dim": "#b3cf9a",
+          "tertiary": "#356668", "primary": "#00658b", "inverse-surface": "#2e3132",
+          "primary-fixed-dim": "#7cd0ff", "primary-container": "#77cefe",
+          "surface-container-highest": "#e1e3e4", "on-secondary": "#ffffff",
+          "tertiary-fixed-dim": "#9ecfd1", "on-error": "#ffffff",
+          "surface-container-high": "#e7e8e9", "on-surface-variant": "#3f484c",
+          "on-tertiary": "#ffffff", "error-container": "#ffdad6",
+          "background": "#f8f9fa", "on-background": "#191c1d",
+          "surface-variant": "#e1e3e4", "surface-container": "#edeeef",
+          "surface-container-low": "#f3f4f5", "on-secondary-container": "#536b3f"
+        },
+        fontFamily: { "headline": ["Manrope"], "body": ["Plus Jakarta Sans"], "label": ["Plus Jakarta Sans"] },
+        borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+      },
+    },
+  }
+</script>
+<style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  .smooth-glide-transition { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+  body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8f9fa; color: #191c1d; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+</style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+
+<!-- ===================== TOP NAV ===================== -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(25,28,29,0.06)]">
+  <!-- Desktop -->
+  <div class="hidden md:flex items-center justify-between px-12 py-4 max-w-[1440px] mx-auto w-full">
+    <div class="text-2xl font-bold tracking-tighter text-slate-900 font-headline">Bird Haven</div>
+    <div class="flex items-center gap-10">
+      <a class="text-slate-600 hover:text-slate-900 hover:-translate-y-0.5 transition-transform duration-300" href="#">Sanctuary</a>
+      <a class="text-slate-600 hover:text-slate-900 hover:-translate-y-0.5 transition-transform duration-300" href="#">Species</a>
+      <a class="text-slate-600 hover:text-slate-900 hover:-translate-y-0.5 transition-transform duration-300" href="#">Care</a>
+      <a class="text-slate-600 hover:text-slate-900 hover:-translate-y-0.5 transition-transform duration-300" href="#">Journal</a>
+      <a class="text-sky-700 font-semibold border-b-2 border-sky-600 hover:-translate-y-0.5 transition-transform duration-300" href="#">Contact</a>
+    </div>
+    <div class="flex items-center gap-6">
+      <button class="material-symbols-outlined text-slate-600 hover:text-primary smooth-glide-transition">person</button>
+      <button class="material-symbols-outlined text-slate-600 hover:text-primary smooth-glide-transition">shopping_bag</button>
+    </div>
+  </div>
+  <!-- Mobile -->
+  <div class="md:hidden flex items-center justify-between px-6 py-4">
+    <span class="text-xl font-bold tracking-tighter text-slate-900 font-headline">Bird Haven</span>
+    <div class="flex gap-4">
+      <span class="material-symbols-outlined text-sky-700">person</span>
+      <span class="material-symbols-outlined text-sky-700">shopping_bag</span>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== MAIN ===================== -->
+<main class="pt-20 md:pt-32 pb-20 md:pb-20">
+
+  <!-- ===== HERO ===== -->
+  <!-- Desktop Hero -->
+  <header class="hidden md:block mb-20 text-center px-12 max-w-[1440px] mx-auto">
+    <span class="text-sm font-bold uppercase tracking-[0.2em] text-primary mb-4 block">Connect With Us</span>
+    <h1 class="text-6xl font-extrabold font-headline text-on-surface tracking-tight leading-[1.1] mb-6">Let's start a <br/>conversation.</h1>
+    <p class="text-on-surface-variant max-w-xl mx-auto text-lg leading-relaxed">Whether you are an aspiring guardian or a long-time avian enthusiast, we are here to provide expert guidance and ethical support.</p>
+  </header>
+
+  <!-- Mobile Hero -->
+  <header class="md:hidden mb-10 text-center px-6 pt-4">
+    <h1 class="text-4xl font-extrabold tracking-tight text-on-surface mb-2">Get in Touch</h1>
+    <p class="text-on-surface-variant max-w-[280px] mx-auto leading-relaxed">Our avian guardians are ready to assist you with any questions.</p>
+  </header>
+
+  <!-- ===== MOBILE: Quick Contact Buttons ===== -->
+  <div class="md:hidden flex gap-4 mb-10 px-6">
+    <a class="flex-1 bg-surface-container-low rounded-xl p-4 flex flex-col items-center justify-center gap-2 active:scale-95 transition-transform" href="tel:+123456789">
+      <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+        <span class="material-symbols-outlined">call</span>
+      </div>
+      <span class="text-sm font-semibold text-on-surface">Call Us</span>
+    </a>
+    <a class="flex-1 bg-secondary-container/30 rounded-xl p-4 flex flex-col items-center justify-center gap-2 active:scale-95 transition-transform" href="https://wa.me/123456789">
+      <div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+      </div>
+      <span class="text-sm font-semibold text-on-secondary-container">WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- ===== DESKTOP: Bento Grid (Info + Form) ===== -->
+  <div class="hidden md:grid grid-cols-12 gap-8 items-start px-12 max-w-[1440px] mx-auto">
+
+    <!-- Left Column: Info Cards -->
+    <div class="col-span-12 lg:col-span-4 space-y-8">
+      <!-- Direct Channels -->
+      <div class="bg-surface-container-low rounded-xl p-8 space-y-8">
+        <h3 class="text-xl font-bold font-headline mb-4">Direct Channels</h3>
+        <div class="flex items-center gap-5 group cursor-pointer">
+          <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors duration-300">
+            <span class="material-symbols-outlined">call</span>
+          </div>
+          <div>
+            <p class="text-xs font-semibold text-primary uppercase tracking-widest">Phone</p>
+            <p class="text-lg font-medium">+1 (555) 829-2732</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-5 group cursor-pointer">
+          <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors duration-300">
+            <span class="material-symbols-outlined">mail</span>
+          </div>
+          <div>
+            <p class="text-xs font-semibold text-primary uppercase tracking-widest">Email</p>
+            <p class="text-lg font-medium">guardian@aviaryarchive.com</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-5 group cursor-pointer">
+          <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors duration-300">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+          </div>
+          <div>
+            <p class="text-xs font-semibold text-primary uppercase tracking-widest">WhatsApp</p>
+            <p class="text-lg font-medium">+1 (555) Aviary-W</p>
+          </div>
+        </div>
+      </div>
+      <!-- Hours Card -->
+      <div class="bg-secondary-container/30 rounded-xl p-8">
+        <h3 class="text-xl font-bold font-headline mb-6 text-on-secondary-container">Consultation Hours</h3>
+        <div class="space-y-4 text-on-secondary-container/80">
+          <div class="flex justify-between border-b border-secondary-container/20 pb-2">
+            <span>Mon — Fri</span><span class="font-bold">09:00 - 18:00</span>
+          </div>
+          <div class="flex justify-between border-b border-secondary-container/20 pb-2">
+            <span>Saturday</span><span class="font-bold">10:00 - 16:00</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Sunday</span><span class="italic">By Appointment Only</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Contact Form -->
+    <div class="col-span-12 lg:col-span-8">
+      <div class="bg-white rounded-xl p-12 shadow-[0_20px_40px_rgba(25,28,29,0.04)]">
+        <form class="grid grid-cols-2 gap-8">
+          <div class="col-span-2 md:col-span-1">
+            <label class="block text-sm font-bold text-on-surface-variant mb-3 px-1">First Name</label>
+            <input class="w-full bg-surface-container-low border-none rounded-md px-6 py-4 focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline-variant outline-none" placeholder="Elias" type="text"/>
+          </div>
+          <div class="col-span-2 md:col-span-1">
+            <label class="block text-sm font-bold text-on-surface-variant mb-3 px-1">Last Name</label>
+            <input class="w-full bg-surface-container-low border-none rounded-md px-6 py-4 focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline-variant outline-none" placeholder="Vogel" type="text"/>
+          </div>
+          <div class="col-span-2">
+            <label class="block text-sm font-bold text-on-surface-variant mb-3 px-1">Email Address</label>
+            <input class="w-full bg-surface-container-low border-none rounded-md px-6 py-4 focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline-variant outline-none" placeholder="elias@domain.com" type="email"/>
+          </div>
+          <div class="col-span-2">
+            <label class="block text-sm font-bold text-on-surface-variant mb-3 px-1">How can we assist you?</label>
+            <select class="w-auto min-w-[240px] bg-surface-container-low border-none rounded-md px-6 py-4 focus:ring-2 focus:ring-primary/20 transition-all text-on-surface-variant outline-none">
+              <option>Select a Topic</option>
+              <option>General Inquiry</option>
+              <option>Bird Care Consultation</option>
+              <option>Ethical Sourcing Question</option>
+              <option>Product Feedback</option>
+            </select>
+          </div>
+          <div class="col-span-2">
+            <label class="block text-sm font-bold text-on-surface-variant mb-3 px-1">Message</label>
+            <textarea class="w-full bg-surface-container-low border-none rounded-md px-6 py-4 focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline-variant resize-none outline-none" placeholder="Share your avian journey with us..." rows="6"></textarea>
+          </div>
+          <div class="col-span-2 flex justify-end mt-4">
+            <button class="bg-gradient-to-br from-primary to-primary-container text-white font-bold px-12 py-5 rounded-full shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 transition-all duration-300">
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MOBILE: Contact Form ===== -->
+  <section class="md:hidden bg-surface-container-lowest rounded-lg mx-6 p-6 shadow-[0_20px_40px_rgba(25,28,29,0.04)] mb-10">
+    <form action="#" class="space-y-6">
+      <div>
+        <label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2 ml-1">Full Name</label>
+        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 placeholder:text-outline-variant transition-all outline-none" placeholder="John Doe" type="text"/>
+      </div>
+      <div>
+        <label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2 ml-1">Email Address</label>
+        <input class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 placeholder:text-outline-variant transition-all outline-none" placeholder="hello@aviary.com" type="email"/>
+      </div>
+      <div>
+        <label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2 ml-1">Your Message</label>
+        <textarea class="w-full bg-surface-container-low border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 placeholder:text-outline-variant transition-all outline-none" placeholder="How can we help your feathered friend?" rows="4"></textarea>
+      </div>
+      <button class="w-full bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold py-4 rounded-full shadow-lg shadow-primary/20 active:scale-[0.98] transition-all" type="submit">
+        Send Inquiry
+      </button>
+    </form>
+  </section>
+
+  <!-- ===== DESKTOP: Map + Location Section ===== -->
+  <section class="hidden md:block mt-20 px-12 max-w-[1440px] mx-auto">
+    <div class="grid grid-cols-12 gap-8 items-stretch">
+      <!-- Location Info -->
+      <div class="col-span-12 md:col-span-4 bg-tertiary-container/20 rounded-xl p-10 flex flex-col justify-center">
+        <h2 class="text-3xl font-headline font-extrabold mb-6 tracking-tight">Visit the Sanctuary</h2>
+        <p class="text-on-surface-variant mb-8 leading-relaxed">Our flagship boutique and sanctuary is nestled in the heart of the coastal valley. Experience our commitment to avian welfare in person.</p>
+        <div class="space-y-4">
+          <div class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-primary mt-1">location_on</span>
+            <address class="not-italic font-medium">1422 Skyreach Boulevard,<br/>Serenity Heights, CA 90210</address>
+          </div>
+        </div>
+        <button class="mt-10 self-start text-primary font-bold flex items-center gap-2 group">
+          Get Directions
+          <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+        </button>
+      </div>
+      <!-- Map -->
+      <div class="col-span-12 md:col-span-8 relative overflow-hidden rounded-xl min-h-[500px]">
+        <img class="w-full h-full object-cover grayscale-[0.3] brightness-[1.05] contrast-[0.9]"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaQgkdHz6ZrQk7oCGr8tW3-svVTFBTWY5R-JopWP3-6xD8UQ9Bom6OYSD7Kd291kaW8nBO0i91wijOBQ6dWdntszFDJ_gDEHTaXdr8g-OB2ImtZKgajWO9Pr-fRibdRHlrJdXNNoop-MCjPKL77rDGVo-VVjnFutns_iXH5tT17dA7TTSTvmhuzJRp2v2t6--f8AxrEWRHz220qybpyFTzRm0V-KJ4_PhgaF2xmm7_ixgPAa_UG7LmJRAxWQzcfyr6QBkjZ8nneK-i"/>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+          <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center shadow-2xl animate-bounce">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">flutter_dash</span>
+          </div>
+          <div class="bg-white/95 backdrop-blur-md px-4 py-2 rounded-full mt-2 shadow-xl border border-white/50">
+            <span class="text-xs font-bold text-on-surface tracking-tighter">Bird Haven</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MOBILE: Map Section ===== -->
+  <section class="md:hidden px-6 space-y-4">
+    <h2 class="text-xl font-bold px-1">Visit The Sanctuary</h2>
+    <div class="relative w-full h-48 rounded-lg overflow-hidden bg-surface-container-high">
+      <img alt="Map view" class="w-full h-full object-cover grayscale opacity-60"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUALpBYyb2-MevYfd90EYWz7NUB7C0ZlwZls-klijUwXXNdgHPyqce33OOSuZ5Q-T45BWS8MQeODXD3opoXkGePjNEMvvi7N6pkzSzlgrvMp3ZXcCGXQz1CSVgi8jEgrFd-rjSc-7TUxx27lAihEMWvj4ObaomIM7lMUoXAwqZC1GGQ80Dz5AY1nCPK2g_6QldwPIsZ5rXXB3oaTQy4o5zMVj5Gp7UOZF0NED1fAkcpmNgdDzyClLcUaT6QqxofdF8120MOUNOVnLu"/>
+      <div class="absolute inset-0 flex items-center justify-center">
+        <div class="bg-white p-3 rounded-full shadow-xl">
+          <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+        </div>
+      </div>
+      <div class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-full shadow-sm">
+        <span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-tighter">122 Sanctuary Road, Aviary Park</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<!-- Desktop Footer -->
+<footer class="hidden md:block bg-slate-50 w-full pt-20 pb-12">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 max-w-[1440px] mx-auto">
+    <div class="md:col-span-1">
+      <div class="text-xl font-black text-slate-900 font-headline mb-6">Bird Haven</div>
+      <p class="text-slate-500 text-sm leading-relaxed mb-6">Redefining avian companionship through ethical guardianship and sustainable sourcing of premium care products.</p>
+      <div class="flex gap-4">
+        <span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer transition-colors">public</span>
+        <span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer transition-colors">hub</span>
+        <span class="material-symbols-outlined text-slate-400 hover:text-primary cursor-pointer transition-colors">nest_eco_leaf</span>
+      </div>
+    </div>
+    <div class="space-y-4">
+      <h4 class="font-bold text-sky-800 uppercase tracking-widest text-xs">Resources</h4>
+      <nav class="flex flex-col gap-3">
+        <a class="text-slate-500 hover:text-sky-600 transition-colors text-sm" href="#">Ethical Sourcing</a>
+        <a class="text-slate-500 hover:text-sky-600 transition-colors text-sm" href="#">Species Guide</a>
+        <a class="text-slate-500 hover:text-sky-600 transition-colors text-sm" href="#">Avian Journal</a>
+        <a class="text-slate-500 hover:text-sky-600 transition-colors text-sm" href="#">Sustainability</a>
+      </nav>
+    </div>
+    <div class="space-y-4">
+      <h4 class="font-bold text-sky-800 uppercase tracking-widest text-xs">Legal &amp; Shipping</h4>
+      <nav class="flex flex-col gap-3">
+        <a class="text-slate-500 hover:text-sky-600 transition-colors text-sm" href="#">Privacy Policy</a>
+        <a class="text-slate-500 hover:text-sky-600 transition-colors text-sm" href="#">Shipping</a>
+        <a class="text-slate-500 hover:text-sky-600 transition-colors text-sm" href="#">Refund Policy</a>
+        <a class="text-slate-500 hover:text-sky-600 transition-colors text-sm" href="#">Terms of Service</a>
+      </nav>
+    </div>
+    <div class="space-y-6">
+      <h4 class="font-bold text-sky-800 uppercase tracking-widest text-xs">Stay Inspired</h4>
+      <div class="relative">
+        <input class="w-full bg-white border-none rounded-md px-4 py-3 text-sm focus:ring-1 focus:ring-primary shadow-sm outline-none" placeholder="Join our newsletter" type="email"/>
+        <button class="absolute right-2 top-1/2 -translate-y-1/2 text-primary">
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-[1440px] mx-auto px-12 mt-16 pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-6">
+    <div class="text-slate-500 text-sm">© 2024 Bird Haven. Ethical Avian Guardianship.</div>
+    <div class="flex gap-8">
+      <span class="text-xs font-bold text-slate-400">MADE FOR FLIGHT</span>
+      <span class="text-xs font-bold text-slate-400">DESIGNED FOR SOULS</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile Footer -->
+<footer class="md:hidden w-full pt-10 pb-28 px-8 bg-slate-50 text-center">
+  <span class="text-xl font-black text-slate-900 mb-4 block font-headline">Bird Haven</span>
+  <div class="flex flex-wrap justify-center gap-4 mb-6">
+    <a class="text-slate-500 text-sm hover:text-sky-600" href="#">Privacy Policy</a>
+    <a class="text-slate-500 text-sm hover:text-sky-600" href="#">Ethical Sourcing</a>
+    <a class="text-slate-500 text-sm hover:text-sky-600" href="#">Contact</a>
+  </div>
+  <p class="text-[10px] text-slate-400 leading-tight uppercase tracking-widest">© 2024 Bird Haven. Ethical Avian Guardianship.</p>
+</footer>
+
+<!-- ===================== BOTTOM NAV (Mobile only) ===================== -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 pb-8 pt-4 bg-white/90 backdrop-blur-xl rounded-t-[3rem] shadow-[0_-10px_30px_rgba(0,0,0,0.04)]">
+  <a class="flex flex-col items-center justify-center text-slate-500 active:scale-95 transition-transform" href="#">
+    <span class="material-symbols-outlined">home</span>
+    <span class="text-[11px] font-medium mt-1">Home</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-slate-500 active:scale-95 transition-transform" href="#">
+    <span class="material-symbols-outlined">search</span>
+    <span class="text-[11px] font-medium mt-1">Search</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-slate-500 active:scale-95 transition-transform" href="#">
+    <span class="material-symbols-outlined">flutter_dash</span>
+    <span class="text-[11px] font-medium mt-1">Birds</span>
+  </a>
+  <a class="flex flex-col items-center justify-center bg-sky-100 text-sky-800 rounded-full px-5 py-2 active:scale-95 transition-transform" href="#">
+    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+    <span class="text-[11px] font-medium mt-1">Profile</span>
+  </a>
+</nav>
+
+</body>
+</html>

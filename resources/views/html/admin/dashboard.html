@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BirdHaven Admin Dashboard</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#eff1f2",
+                    "on-surface-variant": "#3f484c",
+                    "on-secondary-fixed": "#091d2e",
+                    "background": "#f8fafb",
+                    "on-tertiary-container": "#005f1b",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#d1e4fb",
+                    "secondary": "#4e6073",
+                    "tertiary-container": "#7cd97e",
+                    "on-tertiary-fixed-variant": "#005316",
+                    "surface-tint": "#0c6780",
+                    "secondary-container": "#cfe2f9",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "outline-variant": "#bfc8cd",
+                    "outline": "#6f787d",
+                    "inverse-surface": "#2e3132",
+                    "primary": "#0c6780",
+                    "tertiary-fixed": "#99f899",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-highest": "#e1e3e4",
+                    "inverse-primary": "#89d0ed",
+                    "on-tertiary-fixed": "#002105",
+                    "surface-dim": "#d8dadb",
+                    "primary-container": "#87ceeb",
+                    "surface-container": "#eceeef",
+                    "surface-container-high": "#e6e8e9",
+                    "on-error-container": "#93000a",
+                    "primary-fixed-dim": "#89d0ed",
+                    "tertiary-fixed-dim": "#7edb7f",
+                    "on-primary-container": "#005870",
+                    "on-secondary-container": "#526478",
+                    "surface-container-low": "#f2f4f5",
+                    "primary-fixed": "#baeaff",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed-variant": "#004d62",
+                    "on-primary-fixed": "#001f29",
+                    "on-background": "#191c1d",
+                    "secondary-fixed-dim": "#b5c8df",
+                    "surface-bright": "#f8fafb",
+                    "surface-variant": "#e1e3e4",
+                    "tertiary": "#016e21",
+                    "error-container": "#ffdad6",
+                    "on-surface": "#191c1d",
+                    "on-secondary-fixed-variant": "#36485b",
+                    "on-secondary": "#ffffff",
+                    "surface": "#f8fafb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface">
+<!-- SideNavBar Shell -->
+<aside class="fixed left-0 top-0 h-screen w-[260px] z-50 bg-slate-900 flex flex-col py-6 overflow-y-auto shadow-2xl shadow-black/20 font-['Inter'] text-sm antialiased">
+<div class="px-6 mb-8">
+<h1 class="text-lg font-black text-white font-['Manrope']">BirdHaven</h1>
+<p class="text-slate-400 text-xs uppercase tracking-widest mt-1">Management Console</p>
+</div>
+<nav class="flex-1 space-y-1">
+<!-- Active Tab: Dashboard -->
+<a class="relative text-white font-medium before:absolute before:left-0 before:w-1 before:h-8 before:bg-gradient-to-b before:from-sky-400 before:to-sky-600 before:rounded-r-full bg-white/5 px-6 py-3 flex items-center gap-3 transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-sky-400" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="text-slate-400 hover:text-slate-200 px-6 py-3 flex items-center gap-3 hover:bg-slate-800 transition-all duration-300 active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span>Orders</span>
+</a>
+<a class="text-slate-400 hover:text-slate-200 px-6 py-3 flex items-center gap-3 hover:bg-slate-800 transition-all duration-300 active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="flutter_dash">flutter_dash</span>
+<span>Birds</span>
+</a>
+<a class="text-slate-400 hover:text-slate-200 px-6 py-3 flex items-center gap-3 hover:bg-slate-800 transition-all duration-300 active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="category">category</span>
+<span>Categories</span>
+</a>
+<a class="text-slate-400 hover:text-slate-200 px-6 py-3 flex items-center gap-3 hover:bg-slate-800 transition-all duration-300 active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span>Users</span>
+</a>
+<a class="text-slate-400 hover:text-slate-200 px-6 py-3 flex items-center gap-3 hover:bg-slate-800 transition-all duration-300 active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="rate_review">rate_review</span>
+<span>Reviews</span>
+</a>
+</nav>
+<div class="px-6 mt-8">
+<button class="w-full py-3 px-4 bg-gradient-to-br from-primary to-primary-container text-white rounded-DEFAULT font-semibold flex items-center justify-center gap-2 shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+                Add New Bird
+            </button>
+</div>
+<div class="mt-auto px-6 pt-6 border-t border-slate-800/50">
+<a class="text-slate-400 hover:text-red-400 px-2 py-3 flex items-center gap-3 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span>Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-[260px] min-h-screen flex flex-col">
+<!-- TopNavBar Shell -->
+<header class="fixed top-0 right-0 w-[calc(100%-260px)] h-16 z-40 bg-white/80 backdrop-blur-md flex justify-between items-center px-8 shadow-sm shadow-sky-500/5">
+<div class="flex items-center gap-4">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" data-icon="search">search</span>
+<input class="pl-10 pr-4 py-2 bg-slate-50 border-none rounded-full text-sm focus:ring-2 focus:ring-primary/20 w-64 transition-all" placeholder="Search birds, orders..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4 text-slate-500">
+<button class="p-2 hover:bg-sky-50/50 rounded-full transition-colors active:scale-95">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 hover:bg-sky-50/50 rounded-full transition-colors active:scale-95">
+<span class="material-symbols-outlined" data-icon="dark_mode">dark_mode</span>
+</button>
+<button class="p-2 hover:bg-sky-50/50 rounded-full transition-colors active:scale-95">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+<div class="h-8 w-px bg-slate-100"></div>
+<div class="flex items-center gap-3 cursor-pointer group">
+<div class="text-right">
+<p class="text-xs font-bold text-slate-900 leading-none">Julian Thorne</p>
+<p class="text-[10px] text-slate-500 mt-1">Super Admin</p>
+</div>
+<img alt="Admin User Avatar" class="w-10 h-10 rounded-full border-2 border-white shadow-sm object-cover" data-alt="close-up portrait of a professional man with a friendly expression in a modern office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZzHz7Q3_f7-qpw7zdKBWvPabE8AACP8P9mo87xE-fZY8GkvSpqXpfh6wDyWQfSoKKLMSPfI7lunXn370itcJzkPGbd6onpWfym2POj5hLkZ8RrSgXzRXh7I71Zc9j4pfVe8n6gyQ8pIKYcf9JfFgS5vJZF95Y98AS-pQrrDhOJ_RoZvAbYdb7fBqt6-XVN90dcusc3BRw12XF2NWz0SXUh1QXZYu8idZS2XUu2linDp9Z5RN-oJgy6twH-63NeiwqjSMUi3xEuUxg"/>
+</div>
+</div>
+</header>
+<!-- Content Canvas -->
+<div class="mt-16 p-8 space-y-8 flex-1">
+<!-- Welcome Header -->
+<section class="flex justify-between items-end">
+<div>
+<h2 class="text-3xl font-extrabold font-headline text-on-surface tracking-tight">Guardian’s Console</h2>
+<p class="text-on-surface-variant mt-1">Real-time overview of the BirdHaven ecosystem.</p>
+</div>
+<div class="flex gap-3">
+<button class="px-4 py-2 bg-surface-container-high text-on-surface rounded-DEFAULT font-medium text-sm flex items-center gap-2 hover:bg-surface-container-highest transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="calendar_today">calendar_today</span>
+                        This Week
+                    </button>
+</div>
+</section>
+<!-- KPI Grid (Glassmorphism Cards) -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- KPI 1 -->
+<div class="glass-card p-6 rounded-lg relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-all"></div>
+<div class="flex items-center gap-4 mb-4">
+<div class="p-3 bg-primary/10 text-primary rounded-xl">
+<span class="material-symbols-outlined" data-icon="flutter_dash" data-weight="fill" style="font-variation-settings: 'FILL' 1;">flutter_dash</span>
+</div>
+<span class="text-sm font-medium text-on-surface-variant">Total Birds</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-extrabold font-headline">142</span>
+<span class="text-xs font-bold text-tertiary">+12%</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="glass-card p-6 rounded-lg relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-secondary/5 rounded-full blur-2xl group-hover:bg-secondary/10 transition-all"></div>
+<div class="flex items-center gap-4 mb-4">
+<div class="p-3 bg-secondary/10 text-secondary rounded-xl">
+<span class="material-symbols-outlined" data-icon="shopping_bag" data-weight="fill" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+</div>
+<span class="text-sm font-medium text-on-surface-variant">Active Orders</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-extrabold font-headline">18</span>
+<span class="text-xs font-bold text-secondary">High Flow</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="glass-card p-6 rounded-lg relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-tertiary/5 rounded-full blur-2xl group-hover:bg-tertiary/10 transition-all"></div>
+<div class="flex items-center gap-4 mb-4">
+<div class="p-3 bg-tertiary/10 text-tertiary rounded-xl">
+<span class="material-symbols-outlined" data-icon="payments" data-weight="fill" style="font-variation-settings: 'FILL' 1;">payments</span>
+</div>
+<span class="text-sm font-medium text-on-surface-variant">Total Revenue</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-extrabold font-headline">$42.8k</span>
+<span class="text-xs font-bold text-tertiary">+$4.2k</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="glass-card p-6 rounded-lg relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary-container/10 rounded-full blur-2xl group-hover:bg-primary-container/20 transition-all"></div>
+<div class="flex items-center gap-4 mb-4">
+<div class="p-3 bg-primary-container/20 text-on-primary-container rounded-xl">
+<span class="material-symbols-outlined" data-icon="person_add" data-weight="fill" style="font-variation-settings: 'FILL' 1;">person_add</span>
+</div>
+<span class="text-sm font-medium text-on-surface-variant">New Signups</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-extrabold font-headline">45</span>
+<span class="text-xs font-medium text-on-surface-variant">this week</span>
+</div>
+</div>
+</section>
+<!-- Middle Bento Row -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Sales Chart Simulation (Large Card) -->
+<div class="lg:col-span-2 bg-surface-container-lowest p-8 rounded-lg shadow-sm border border-outline-variant/10">
+<div class="flex justify-between items-center mb-10">
+<div>
+<h3 class="text-lg font-bold font-headline">Weekly Sales Trends</h3>
+<p class="text-sm text-on-surface-variant">Interactive performance visualization</p>
+</div>
+<div class="flex gap-2">
+<span class="flex items-center gap-1.5 text-xs font-medium text-primary">
+<span class="w-2 h-2 rounded-full bg-primary"></span> Birds
+                            </span>
+<span class="flex items-center gap-1.5 text-xs font-medium text-tertiary">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> Accessories
+                            </span>
+</div>
+</div>
+<!-- Chart Placeholder -->
+<div class="h-64 relative flex items-end gap-2 overflow-hidden px-4">
+<div class="flex-1 bg-gradient-to-t from-primary/10 to-primary/40 rounded-t-lg h-[40%]"></div>
+<div class="flex-1 bg-gradient-to-t from-primary/10 to-primary/40 rounded-t-lg h-[60%]"></div>
+<div class="flex-1 bg-gradient-to-t from-primary/10 to-primary/40 rounded-t-lg h-[45%]"></div>
+<div class="flex-1 bg-gradient-to-t from-primary/10 to-primary/40 rounded-t-lg h-[85%] relative">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[10px] px-2 py-1 rounded shadow-lg">$8,420</div>
+</div>
+<div class="flex-1 bg-gradient-to-t from-primary/10 to-primary/40 rounded-t-lg h-[55%]"></div>
+<div class="flex-1 bg-gradient-to-t from-primary/10 to-primary/40 rounded-t-lg h-[70%]"></div>
+<div class="flex-1 bg-gradient-to-t from-primary/10 to-primary/40 rounded-t-lg h-[95%]"></div>
+</div>
+<div class="flex justify-between mt-4 px-4 text-[10px] font-bold text-on-surface-variant/50 tracking-widest uppercase">
+<span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+</div>
+</div>
+<!-- Recent Activity Feed -->
+<div class="bg-surface-container-low p-8 rounded-lg">
+<h3 class="text-lg font-bold font-headline mb-6">Observer Activity</h3>
+<div class="space-y-6">
+<div class="flex gap-4 items-start">
+<div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary shadow-sm flex-shrink-0">
+<span class="material-symbols-outlined text-lg" data-icon="rate_review">rate_review</span>
+</div>
+<div>
+<p class="text-sm font-semibold">New review by Elena Vance</p>
+<p class="text-xs text-on-surface-variant mt-0.5">2 minutes ago • Hybrid Sun Conure</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="w-10 h-10 rounded-full bg-error-container/30 flex items-center justify-center text-error shadow-sm flex-shrink-0">
+<span class="material-symbols-outlined text-lg" data-icon="warning">warning</span>
+</div>
+<div>
+<p class="text-sm font-semibold">Low stock alert</p>
+<p class="text-xs text-on-surface-variant mt-0.5">1 hour ago • Hyacinth Macaw (1 left)</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-tertiary shadow-sm flex-shrink-0">
+<span class="material-symbols-outlined text-lg" data-icon="shopping_cart">shopping_cart</span>
+</div>
+<div>
+<p class="text-sm font-semibold">New order #BH-8291</p>
+<p class="text-xs text-on-surface-variant mt-0.5">3 hours ago • $2,450.00</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-slate-400 shadow-sm flex-shrink-0">
+<span class="material-symbols-outlined text-lg" data-icon="person_add">person_add</span>
+</div>
+<div>
+<p class="text-sm font-semibold">New partner inquiry</p>
+<p class="text-xs text-on-surface-variant mt-0.5">5 hours ago • Wings of Oregon</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-8 py-3 text-xs font-bold text-primary uppercase tracking-widest hover:bg-white/50 rounded-lg transition-all">View All Activity</button>
+</div>
+</section>
+<!-- Bottom Row: Table & Quick Actions -->
+<section class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+<!-- Recent Orders Table -->
+<div class="lg:col-span-3 bg-surface-container-lowest rounded-lg shadow-sm overflow-hidden">
+<div class="px-8 py-6 flex justify-between items-center border-b border-surface-container">
+<h3 class="text-lg font-bold font-headline">Recent Transactions</h3>
+<button class="text-sm text-primary font-semibold hover:underline">Download CSV</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="text-[10px] font-bold text-on-surface-variant/60 uppercase tracking-widest bg-surface-container-low">
+<th class="px-8 py-4">Order ID</th>
+<th class="px-8 py-4">Customer</th>
+<th class="px-8 py-4">Date</th>
+<th class="px-8 py-4">Status</th>
+<th class="px-8 py-4 text-right">Total</th>
+</tr>
+</thead>
+<tbody class="text-sm divide-y divide-surface-container">
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-8 py-5 font-medium">#BH-8291</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center text-[10px] font-bold">JT</div>
+                                            Julian Thorne
+                                        </div>
+</td>
+<td class="px-8 py-5 text-on-surface-variant">Today</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-tertiary-container/20 text-on-tertiary-container rounded-full text-[10px] font-bold uppercase flex items-center gap-1 w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Paid
+                                        </span>
+</td>
+<td class="px-8 py-5 text-right font-bold">$2,450.00</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-8 py-5 font-medium">#BH-8290</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-[10px] font-bold">EV</div>
+                                            Elena Vance
+                                        </div>
+</td>
+<td class="px-8 py-5 text-on-surface-variant">Yesterday</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-secondary-container/30 text-on-secondary-container rounded-full text-[10px] font-bold uppercase flex items-center gap-1 w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Processing
+                                        </span>
+</td>
+<td class="px-8 py-5 text-right font-bold">$1,120.00</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-8 py-5 font-medium">#BH-8289</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center text-[10px] font-bold">MK</div>
+                                            Marcus Kane
+                                        </div>
+</td>
+<td class="px-8 py-5 text-on-surface-variant">24 Oct, 2024</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-tertiary-container/20 text-on-tertiary-container rounded-full text-[10px] font-bold uppercase flex items-center gap-1 w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Paid
+                                        </span>
+</td>
+<td class="px-8 py-5 text-right font-bold">$450.00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Quick Actions Card -->
+<div class="bg-gradient-to-br from-slate-900 to-slate-800 p-8 rounded-lg text-white shadow-xl flex flex-col">
+<h3 class="text-lg font-bold font-headline mb-6">Quick Actions</h3>
+<div class="space-y-4 flex-1">
+<button class="w-full flex items-center gap-4 p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-all text-left group">
+<span class="material-symbols-outlined text-sky-400 group-hover:scale-110 transition-transform" data-icon="add_circle">add_circle</span>
+<span class="text-sm font-semibold">Add New Bird</span>
+</button>
+<button class="w-full flex items-center gap-4 p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-all text-left group">
+<span class="material-symbols-outlined text-sky-400 group-hover:scale-110 transition-transform" data-icon="view_carousel">view_carousel</span>
+<span class="text-sm font-semibold">Manage Sliders</span>
+</button>
+<button class="w-full flex items-center gap-4 p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-all text-left group">
+<span class="material-symbols-outlined text-sky-400 group-hover:scale-110 transition-transform" data-icon="file_download">file_download</span>
+<span class="text-sm font-semibold">Export Reports</span>
+</button>
+<button class="w-full flex items-center gap-4 p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-all text-left group">
+<span class="material-symbols-outlined text-sky-400 group-hover:scale-110 transition-transform" data-icon="campaign">campaign</span>
+<span class="text-sm font-semibold">Push Notification</span>
+</button>
+</div>
+<div class="mt-8 p-4 bg-sky-500/10 rounded-lg border border-sky-500/20">
+<p class="text-[10px] font-bold text-sky-400 uppercase tracking-widest mb-2">System Status</p>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="text-xs font-medium">All systems operational</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Footer Shell -->
+<footer class="w-full py-6 mt-auto border-t border-slate-100 bg-transparent flex justify-between items-center px-8 font-['Inter'] text-xs tracking-wider uppercase opacity-80 hover:opacity-100 transition-all">
+<span class="text-slate-400">© 2024 BirdHaven CMS</span>
+<div class="flex gap-8">
+<a class="text-slate-400 hover:text-sky-500 hover:underline transition-all" href="#">Documentation</a>
+<a class="text-slate-400 hover:text-sky-500 hover:underline transition-all" href="#">Support</a>
+<span class="text-slate-400/50 cursor-default">Version 1.2.0</span>
+</div>
+</footer>
+</main>
+</body></html>

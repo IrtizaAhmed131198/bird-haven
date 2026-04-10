@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profile Settings | Bird Haven</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary-container": "#77cefe", "on-background": "#191c1d",
+          "tertiary-fixed": "#b9ecee", "outline": "#6f787d",
+          "on-tertiary-fixed": "#002021", "on-secondary-container": "#536b3f",
+          "surface-container-high": "#e7e8e9", "surface-dim": "#d9dadb",
+          "on-tertiary-container": "#27585a", "surface-container-low": "#f3f4f5",
+          "secondary-fixed-dim": "#b3cf9a", "secondary-container": "#cfecb4",
+          "on-secondary-fixed": "#0c2000", "surface-bright": "#f8f9fa",
+          "tertiary-container": "#9bcdcf", "inverse-on-surface": "#f0f1f2",
+          "on-error": "#ffffff", "on-primary-container": "#005778",
+          "on-error-container": "#93000a", "surface-container": "#edeeef",
+          "on-primary": "#ffffff", "on-surface": "#191c1d",
+          "tertiary-fixed-dim": "#9ecfd1", "surface-variant": "#e1e3e4",
+          "on-primary-fixed": "#001e2c", "tertiary": "#356668",
+          "secondary-fixed": "#cfecb4", "surface": "#f8f9fa",
+          "surface-container-highest": "#e1e3e4", "primary": "#00658b",
+          "on-tertiary": "#ffffff", "primary-fixed": "#c4e7ff",
+          "on-surface-variant": "#3f484c", "surface-tint": "#00658b",
+          "surface-container-lowest": "#ffffff", "outline-variant": "#bfc8cd",
+          "on-secondary-fixed-variant": "#364d24", "error-container": "#ffdad6",
+          "primary-fixed-dim": "#7cd0ff", "error": "#ba1a1a",
+          "on-tertiary-fixed-variant": "#1a4e50", "secondary": "#4d653a",
+          "on-secondary": "#ffffff", "inverse-primary": "#7cd0ff",
+          "on-primary-fixed-variant": "#004c69", "inverse-surface": "#2e3132",
+          "background": "#f8f9fa"
+        },
+        fontFamily: { "headline": ["Manrope"], "body": ["Plus Jakarta Sans"], "label": ["Plus Jakarta Sans"] },
+        borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+      },
+    },
+  }
+</script>
+<style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  body { background-color: #f8f9fa; color: #191c1d; font-family: 'Plus Jakarta Sans', sans-serif; -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; }
+  h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+  .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+  .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+  .custom-scrollbar::-webkit-scrollbar-thumb { background: #bfc8cd; border-radius: 10px; }
+</style>
+</head>
+<body class="bg-surface text-on-surface antialiased custom-scrollbar min-h-screen pb-32 md:pb-0">
+
+<!-- ===================== TOP NAV ===================== -->
+<!-- Desktop Nav -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(25,28,29,0.06)] hidden md:flex items-center justify-between px-12 py-4 max-w-[1440px] left-1/2 -translate-x-1/2">
+  <div class="text-2xl font-bold tracking-tighter text-slate-900 font-headline">Bird Haven</div>
+  <div class="flex items-center space-x-8">
+    <a class="text-slate-600 hover:text-slate-900 transition-transform duration-300 hover:-translate-y-0.5" href="#">Sanctuary</a>
+    <a class="text-slate-600 hover:text-slate-900 transition-transform duration-300 hover:-translate-y-0.5" href="#">Species</a>
+    <a class="text-slate-600 hover:text-slate-900 transition-transform duration-300 hover:-translate-y-0.5" href="#">Care</a>
+    <a class="text-slate-600 hover:text-slate-900 transition-transform duration-300 hover:-translate-y-0.5" href="#">Journal</a>
+  </div>
+  <div class="flex items-center space-x-5">
+    <button class="material-symbols-outlined text-sky-700 hover:scale-110 transition-transform">person</button>
+    <button class="material-symbols-outlined text-sky-700 hover:scale-110 transition-transform">shopping_bag</button>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<header class="md:hidden fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(25,28,29,0.06)] px-6 py-4">
+  <div class="flex items-center justify-between max-w-[1440px] mx-auto w-full">
+    <div class="flex items-center gap-3">
+      <button class="p-2 hover:bg-surface-container-low rounded-full transition-colors">
+        <span class="material-symbols-outlined text-on-surface">arrow_back</span>
+      </button>
+      <h1 class="text-xl font-bold tracking-tighter text-slate-900 font-headline">Settings</h1>
+    </div>
+    <button class="p-2 text-primary hover:bg-primary-fixed rounded-full transition-all">
+      <span class="material-symbols-outlined">save</span>
+    </button>
+  </div>
+</header>
+
+<!-- ===================== DESKTOP LAYOUT ===================== -->
+<div class="hidden md:flex max-w-[1440px] mx-auto pt-24">
+
+  <!-- Sidebar -->
+  <aside class="w-64 h-screen fixed left-0 top-0 pt-24 pb-8 bg-white flex flex-col space-y-2 pr-4 z-40">
+    <div class="px-8 mb-10">
+      <div class="w-16 h-16 rounded-full overflow-hidden mb-4 shadow-lg">
+        <img alt="User profile photo" class="w-full h-full object-cover"
+          src="images/default.png"/>
+      </div>
+      <h3 class="text-slate-900 font-headline font-bold text-lg leading-tight">Welcome Back</h3>
+      <p class="text-slate-500 text-xs">Ethical Guardian Member</p>
+    </div>
+    <nav class="flex flex-col space-y-1">
+      <a class="flex items-center space-x-3 px-8 py-3 bg-sky-50 text-sky-700 font-semibold rounded-r-full text-sm" href="#">
+        <span class="material-symbols-outlined text-xl">person</span><span>My Profile</span>
+      </a>
+      <a class="flex items-center space-x-3 px-8 py-3 text-slate-500 hover:text-sky-600 hover:bg-slate-50 transition-colors text-sm" href="#">
+        <span class="material-symbols-outlined text-xl">receipt_long</span><span>Order History</span>
+      </a>
+      <a class="flex items-center space-x-3 px-8 py-3 text-slate-500 hover:text-sky-600 hover:bg-slate-50 transition-colors text-sm" href="#">
+        <span class="material-symbols-outlined text-xl">local_shipping</span><span>Track Orders</span>
+      </a>
+      <a class="flex items-center space-x-3 px-8 py-3 text-slate-500 hover:text-sky-600 hover:bg-slate-50 transition-colors text-sm" href="#">
+        <span class="material-symbols-outlined text-xl">flutter_dash</span><span>Birds of Interest</span>
+      </a>
+      <a class="flex items-center space-x-3 px-8 py-3 text-slate-500 hover:text-sky-600 hover:bg-slate-50 transition-colors text-sm" href="#">
+        <span class="material-symbols-outlined text-xl">settings</span><span>Settings</span>
+      </a>
+    </nav>
+    <div class="mt-auto px-8 pt-6">
+      <button class="w-full py-3 bg-surface-container-high text-on-surface font-semibold rounded-xl hover:bg-primary-container/20 transition-colors text-sm">
+        Contact Support
+      </button>
+    </div>
+  </aside>
+
+  <!-- Desktop Main Content -->
+  <main class="ml-64 pt-8 pb-32 px-16 min-h-screen w-full">
+    <div class="max-w-4xl mx-auto">
+      <header class="mb-12">
+        <h1 class="text-4xl font-headline font-extrabold tracking-tight text-on-surface mb-2">Profile Settings</h1>
+        <p class="text-on-surface-variant max-w-lg">Manage your ethical guardianship profile and account security for Bird Haven.</p>
+      </header>
+
+      <div class="space-y-10">
+
+        <!-- Personal Information -->
+        <section class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_20px_40px_rgba(25,28,29,0.06)]">
+          <div class="flex items-center space-x-3 mb-8">
+            <span class="material-symbols-outlined text-primary">badge</span>
+            <h2 class="text-xl font-headline font-bold">Personal Information</h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="space-y-2">
+              <label class="text-xs font-bold uppercase tracking-wider text-outline">Full Name</label>
+              <input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3 text-on-surface focus:ring-2 focus:ring-primary/20 transition-all shadow-sm outline-none" type="text" value="Julian Thorne"/>
+            </div>
+            <div class="space-y-2">
+              <label class="text-xs font-bold uppercase tracking-wider text-outline">Email Address</label>
+              <input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3 text-on-surface focus:ring-2 focus:ring-primary/20 transition-all shadow-sm outline-none" type="email" value="j.thorne@guardian.archive"/>
+            </div>
+            <div class="md:col-span-2 space-y-4">
+              <label class="text-xs font-bold uppercase tracking-wider text-outline">Profile Avatar</label>
+              <div class="flex items-center space-x-6">
+                <img alt="Julian Thorne" class="w-20 h-20 rounded-full object-cover shadow-md"
+                  src="images/user-profile.png"/>
+                <button class="px-6 py-2 bg-primary-container/30 text-on-primary-container font-semibold rounded-full hover:bg-primary-container/50 transition-colors text-sm">Change Photo</button>
+                <button class="text-on-surface-variant hover:text-error transition-colors text-sm font-medium">Remove</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Account Security -->
+        <section class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_20px_40px_rgba(25,28,29,0.06)]">
+          <div class="flex items-center space-x-3 mb-8">
+            <span class="material-symbols-outlined text-primary">security</span>
+            <h2 class="text-xl font-headline font-bold">Account Security</h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="space-y-2">
+              <label class="text-xs font-bold uppercase tracking-wider text-outline">Current Password</label>
+              <input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3 text-on-surface focus:ring-2 focus:ring-primary/20 transition-all shadow-sm outline-none" type="password" value="••••••••••••"/>
+            </div>
+            <div class="space-y-2">
+              <label class="text-xs font-bold uppercase tracking-wider text-outline">New Password</label>
+              <input class="w-full bg-surface-container-low border-none rounded-xl px-4 py-3 text-on-surface focus:ring-2 focus:ring-primary/20 transition-all shadow-sm outline-none" placeholder="Enter new password" type="password"/>
+            </div>
+            <div class="md:col-span-2">
+              <div class="flex items-center justify-between p-4 bg-secondary-container/10 rounded-xl border-l-4 border-secondary">
+                <div class="flex items-center space-x-3">
+                  <span class="material-symbols-outlined text-secondary">verified_user</span>
+                  <div>
+                    <p class="font-bold text-on-surface text-sm">Two-Factor Authentication</p>
+                    <p class="text-xs text-on-surface-variant">Active since May 14, 2024</p>
+                  </div>
+                </div>
+                <button class="text-primary font-bold text-sm hover:underline">Manage</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Shipping Addresses -->
+        <section class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_20px_40px_rgba(25,28,29,0.06)]">
+          <div class="flex items-center justify-between mb-8">
+            <div class="flex items-center space-x-3">
+              <span class="material-symbols-outlined text-primary">location_on</span>
+              <h2 class="text-xl font-headline font-bold">Shipping Addresses</h2>
+            </div>
+            <button class="flex items-center space-x-2 text-primary font-bold text-sm">
+              <span class="material-symbols-outlined text-sm">add</span><span>Add New</span>
+            </button>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="p-6 bg-surface-container border border-outline-variant/30 rounded-xl relative group">
+              <div class="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <button class="material-symbols-outlined text-on-surface-variant hover:text-primary text-lg">edit</button>
+                <button class="material-symbols-outlined text-on-surface-variant hover:text-error text-lg">delete</button>
+              </div>
+              <span class="inline-block px-2 py-1 bg-secondary text-on-secondary text-[10px] font-bold uppercase rounded mb-4">Primary</span>
+              <p class="font-bold mb-1">Julian Thorne</p>
+              <p class="text-sm text-on-surface-variant leading-relaxed">
+                482 Skylark Promenade<br/>Suite 204, Cloud District<br/>Portland, OR 97204
+              </p>
+            </div>
+            <div class="p-6 bg-surface-container-low border border-dashed border-outline-variant rounded-xl flex items-center justify-center cursor-pointer hover:bg-surface-container transition-colors">
+              <div class="text-center">
+                <span class="material-symbols-outlined text-3xl text-outline-variant mb-2">local_shipping</span>
+                <p class="text-sm text-on-surface-variant font-medium">Add another shipping location</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Save Button -->
+        <div class="flex justify-end pt-6">
+          <button class="px-12 py-4 bg-gradient-to-r from-primary to-primary-container text-white font-headline font-bold rounded-full shadow-[0_20px_40px_rgba(0,101,139,0.2)] hover:-translate-y-0.5 transition-transform duration-300">
+            Save Changes
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- ===================== MOBILE MAIN ===================== -->
+<main class="md:hidden pt-24 px-6 space-y-8 max-w-md mx-auto">
+
+  <!-- Hero Profile Section -->
+  <section class="flex flex-col items-center text-center space-y-4">
+    <div class="relative group">
+      <div class="w-24 h-24 rounded-full overflow-hidden border-4 border-white shadow-xl">
+        <img class="w-full h-full object-cover"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAucR6exlM1moXw2We0LzlTEkkm2sbACMvW6037k_X7UJ8rSPQvgyE3KI8R41NBZ2OEJOqGg6ccfebVVniRs8TsaFd4E9wGYRbq350tdfOfEkzjVj3UI8rVmjryLcxxwl3iYsgwiZDUII3aE1cCvMX8hG8qAIlIoSBxqBkg5s8BMtWt5KAfi7rajFoG6XLijEOH6U_9UT_4fsJrpejrxrSo4K7OsGk9YabJqvn1rLJTsMxc48hmkCrTSmlkndIpDuH_RW0mxoHUC7e1"/>
+      </div>
+      <button class="absolute bottom-0 right-0 bg-primary text-white p-2 rounded-full shadow-lg border-2 border-white">
+        <span class="material-symbols-outlined text-sm">edit</span>
+      </button>
+    </div>
+    <div>
+      <h2 class="font-headline font-extrabold text-2xl tracking-tight text-on-surface">Julian Thorne</h2>
+      <p class="text-sm text-outline uppercase tracking-widest">Ethical Guardian Member</p>
+    </div>
+  </section>
+
+  <!-- Tab Navigation -->
+  <nav class="flex space-x-2 p-1 bg-surface-container-low rounded-xl">
+    <button class="flex-1 py-2 px-3 text-sm font-semibold rounded-lg bg-white shadow-sm text-primary transition-all">Personal</button>
+    <button class="flex-1 py-2 px-3 text-sm font-medium rounded-lg text-outline hover:text-on-surface transition-all">Account</button>
+    <button class="flex-1 py-2 px-3 text-sm font-medium rounded-lg text-outline hover:text-on-surface transition-all">Address</button>
+  </nav>
+
+  <div class="space-y-10">
+
+    <!-- Personal Details -->
+    <section class="space-y-4">
+      <div class="flex items-center space-x-2 mb-2">
+        <span class="material-symbols-outlined text-primary text-lg">person</span>
+        <h3 class="font-headline font-bold text-lg">Personal Details</h3>
+      </div>
+      <div class="space-y-5">
+        <div class="space-y-1.5">
+          <label class="text-xs font-semibold text-outline-variant ml-4 uppercase tracking-tighter">Full Name</label>
+          <input class="w-full bg-surface-container-lowest border-none rounded-xl py-4 px-6 shadow-[0_4px_12px_rgba(0,0,0,0.03)] focus:ring-2 focus:ring-primary/20 transition-all outline-none" type="text" value="Julian Thorne"/>
+        </div>
+        <div class="space-y-1.5">
+          <label class="text-xs font-semibold text-outline-variant ml-4 uppercase tracking-tighter">Email Address</label>
+          <input class="w-full bg-surface-container-lowest border-none rounded-xl py-4 px-6 shadow-[0_4px_12px_rgba(0,0,0,0.03)] focus:ring-2 focus:ring-primary/20 transition-all outline-none" type="email" value="julian.thorne@aviary.io"/>
+        </div>
+        <div class="space-y-1.5">
+          <label class="text-xs font-semibold text-outline-variant ml-4 uppercase tracking-tighter">Phone Number</label>
+          <input class="w-full bg-surface-container-lowest border-none rounded-xl py-4 px-6 shadow-[0_4px_12px_rgba(0,0,0,0.03)] focus:ring-2 focus:ring-primary/20 transition-all outline-none" type="tel" value="+1 (555) 892-0412"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Security & Account -->
+    <section class="space-y-4">
+      <div class="flex items-center space-x-2 mb-2">
+        <span class="material-symbols-outlined text-primary text-lg">security</span>
+        <h3 class="font-headline font-bold text-lg">Security &amp; Account</h3>
+      </div>
+      <div class="space-y-3">
+        <div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.03)]">
+          <div class="flex items-center space-x-3">
+            <span class="material-symbols-outlined text-outline">lock</span>
+            <span class="text-sm font-medium">Change Password</span>
+          </div>
+          <span class="material-symbols-outlined text-outline-variant">chevron_right</span>
+        </div>
+        <div class="flex items-center justify-between p-4 bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.03)]">
+          <div class="flex items-center space-x-3">
+            <span class="material-symbols-outlined text-outline">authenticator</span>
+            <span class="text-sm font-medium">Two-Factor Auth</span>
+          </div>
+          <div class="w-10 h-5 bg-secondary-container rounded-full relative">
+            <div class="w-4 h-4 bg-white rounded-full absolute right-0.5 top-0.5 shadow-sm"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Default Address -->
+    <section class="space-y-4">
+      <div class="flex items-center space-x-2 mb-2">
+        <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+        <h3 class="font-headline font-bold text-lg">Default Address</h3>
+      </div>
+      <div class="p-6 bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.03)] space-y-4 border border-outline-variant/10">
+        <div class="flex items-start justify-between">
+          <div class="space-y-1">
+            <p class="font-semibold text-on-surface">Home Sanctuary</p>
+            <p class="text-sm text-outline leading-relaxed">
+              4221 Skyward Ridge Rd.<br/>Boulder, CO 80302<br/>United States
+            </p>
+          </div>
+          <span class="bg-secondary-container text-on-secondary-container text-[10px] px-2 py-1 rounded-full font-bold uppercase tracking-widest">Primary</span>
+        </div>
+        <button class="w-full py-2 text-xs font-bold text-primary uppercase tracking-widest border border-primary/20 rounded-lg hover:bg-primary/5 transition-colors">
+          Manage Addresses
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <!-- Logout -->
+  <button class="w-full py-4 text-error font-bold flex items-center justify-center space-x-2 border border-error/10 rounded-2xl bg-error-container/20">
+    <span class="material-symbols-outlined text-lg">logout</span>
+    <span>Logout Account</span>
+  </button>
+</main>
+
+<!-- ===================== DESKTOP FOOTER ===================== -->
+<footer class="hidden md:block md:ml-64 bg-slate-50 pt-20 pb-12 w-full">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 max-w-[1440px] mx-auto">
+    <div class="col-span-1">
+      <div class="text-xl font-black text-slate-900 mb-6 font-headline">Bird Haven</div>
+      <p class="text-slate-500 text-sm">Ethical guardians of rare and exotic avian species. Dedicated to conservation through education.</p>
+    </div>
+    <div>
+      <h4 class="font-bold mb-6 text-sky-800">Resources</h4>
+      <ul class="space-y-3 text-sm text-slate-500">
+        <li><a class="hover:text-sky-600 transition-opacity" href="#">Privacy Policy</a></li>
+        <li><a class="hover:text-sky-600 transition-opacity" href="#">Ethical Sourcing</a></li>
+        <li><a class="hover:text-sky-600 transition-opacity" href="#">Care Guides</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-bold mb-6 text-sky-800">Guardian Support</h4>
+      <ul class="space-y-3 text-sm text-slate-500">
+        <li><a class="hover:text-sky-600 transition-opacity" href="#">Shipping</a></li>
+        <li><a class="hover:text-sky-600 transition-opacity" href="#">Contact</a></li>
+        <li><a class="hover:text-sky-600 transition-opacity" href="#">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="col-span-1">
+      <p class="text-slate-400 text-xs mt-10 uppercase tracking-widest">© 2024 Bird Haven. Ethical Avian Guardianship.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== MOBILE BOTTOM NAV ===================== -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 pb-8 pt-4 bg-white/90 backdrop-blur-xl shadow-[0_-10px_30px_rgba(0,0,0,0.04)] rounded-t-[3rem]">
+  <a class="flex flex-col items-center justify-center text-slate-500 active:scale-95 transition-transform" href="#">
+    <span class="material-symbols-outlined">home</span>
+    <span class="text-[11px] font-medium mt-1">Home</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-slate-500 active:scale-95 transition-transform" href="#">
+    <span class="material-symbols-outlined">search</span>
+    <span class="text-[11px] font-medium mt-1">Search</span>
+  </a>
+  <a class="flex flex-col items-center justify-center text-slate-500 active:scale-95 transition-transform" href="#">
+    <span class="material-symbols-outlined">flutter_dash</span>
+    <span class="text-[11px] font-medium mt-1">Birds</span>
+  </a>
+  <a class="flex flex-col items-center justify-center bg-sky-100 text-sky-800 rounded-full px-5 py-2 active:scale-95 transition-transform" href="#">
+    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+    <span class="text-[11px] font-medium mt-0.5">Profile</span>
+  </a>
+</nav>
+
+</body>
+</html>

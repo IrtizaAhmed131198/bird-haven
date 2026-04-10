@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BirdHaven Admin - Appearance Settings</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#eff1f2",
+                    "on-surface-variant": "#3f484c",
+                    "on-secondary-fixed": "#091d2e",
+                    "background": "#f8fafb",
+                    "on-tertiary-container": "#005f1b",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#d1e4fb",
+                    "secondary": "#4e6073",
+                    "tertiary-container": "#7cd97e",
+                    "on-tertiary-fixed-variant": "#005316",
+                    "surface-tint": "#0c6780",
+                    "secondary-container": "#cfe2f9",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "outline-variant": "#bfc8cd",
+                    "outline": "#6f787d",
+                    "inverse-surface": "#2e3132",
+                    "primary": "#0c6780",
+                    "tertiary-fixed": "#99f899",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-highest": "#e1e3e4",
+                    "inverse-primary": "#89d0ed",
+                    "on-tertiary-fixed": "#002105",
+                    "surface-dim": "#d8dadb",
+                    "primary-container": "#87ceeb",
+                    "surface-container": "#eceeef",
+                    "surface-container-high": "#e6e8e9",
+                    "on-error-container": "#93000a",
+                    "primary-fixed-dim": "#89d0ed",
+                    "tertiary-fixed-dim": "#7edb7f",
+                    "on-primary-container": "#005870",
+                    "on-secondary-container": "#526478",
+                    "surface-container-low": "#f2f4f5",
+                    "primary-fixed": "#baeaff",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed-variant": "#004d62",
+                    "on-primary-fixed": "#001f29",
+                    "on-background": "#191c1d",
+                    "secondary-fixed-dim": "#b5c8df",
+                    "surface-bright": "#f8fafb",
+                    "surface-variant": "#e1e3e4",
+                    "tertiary": "#016e21",
+                    "error-container": "#ffdad6",
+                    "on-surface": "#191c1d",
+                    "on-secondary-fixed-variant": "#36485b",
+                    "on-secondary": "#ffffff",
+                    "surface": "#f8fafb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-background font-body text-on-background antialiased">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-screen w-[260px] z-50 bg-slate-900 dark:bg-slate-950 flex flex-col py-6 overflow-y-auto shadow-2xl shadow-black/20 font-['Inter'] text-sm antialiased">
+<div class="px-8 mb-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-sky-400 rounded-lg flex items-center justify-center text-slate-900">
+<span class="material-symbols-outlined" data-icon="flutter_dash">flutter_dash</span>
+</div>
+<div>
+<h1 class="text-lg font-black text-white font-['Manrope']">BirdHaven</h1>
+<p class="text-[10px] text-slate-500 uppercase tracking-widest">Management Console</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="text-slate-400 hover:text-slate-200 px-6 py-3 flex items-center gap-3 hover:bg-slate-800 transition-all duration-300 active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="text-slate-400 hover:text-slate-200 px-6 py-3 flex items-center gap-3 hover:bg-slate-800 transition-all duration-300 active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span>Orders</span>
+</a>
+<a class="text-slate-400 hover:text-slate-200 px-6 py-3 flex items-center gap-3 hover:bg-slate-800 transition-all duration-300 active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="flutter_dash">flutter_dash</span>
+<span>Birds</span>
+</a>
+<a class="text-slate-400 hover:text-slate-200 px-6 py-3 flex items-center gap-3 hover:bg-slate-800 transition-all duration-300 active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="category">category</span>
+<span>Categories</span>
+</a>
+<a class="text-slate-400 hover:text-slate-200 px-6 py-3 flex items-center gap-3 hover:bg-slate-800 transition-all duration-300 active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span>Users</span>
+</a>
+<a class="text-slate-400 hover:text-slate-200 px-6 py-3 flex items-center gap-3 hover:bg-slate-800 transition-all duration-300 active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="rate_review">rate_review</span>
+<span>Reviews</span>
+</a>
+<a class="text-slate-400 hover:text-slate-200 px-6 py-3 flex items-center gap-3 hover:bg-slate-800 transition-all duration-300 active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span>CMS Pages</span>
+</a>
+<a class="text-slate-400 hover:text-slate-200 px-6 py-3 flex items-center gap-3 hover:bg-slate-800 transition-all duration-300 active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span>Homepage</span>
+</a>
+<a class="text-slate-400 hover:text-slate-200 px-6 py-3 flex items-center gap-3 hover:bg-slate-800 transition-all duration-300 active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="perm_media">perm_media</span>
+<span>Media</span>
+</a>
+<a class="relative text-white font-medium before:absolute before:left-0 before:w-1 before:h-8 before:bg-gradient-to-b before:from-sky-400 before:to-sky-600 before:rounded-r-full bg-white/5 px-6 py-3 flex items-center gap-3 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+<a class="text-slate-400 hover:text-slate-200 px-6 py-3 flex items-center gap-3 hover:bg-slate-800 transition-all duration-300 active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span>SEO</span>
+</a>
+</nav>
+<div class="px-6 mt-8">
+<button class="w-full bg-sky-500 hover:bg-sky-400 text-slate-900 font-bold py-3 rounded-lg flex items-center justify-center gap-2 transition-all">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                Add New Bird
+            </button>
+</div>
+<div class="mt-auto px-6 border-t border-slate-800/50 pt-6">
+<a class="text-slate-400 hover:text-white flex items-center gap-3 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+                Logout
+            </a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-[260px] min-h-screen flex flex-col pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 right-0 w-[calc(100%-260px)] h-16 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md flex justify-between items-center px-8 shadow-sm shadow-sky-500/5 font-['Manrope'] font-semibold text-sm tracking-tight">
+<div class="flex items-center gap-2">
+<span class="text-slate-400">System</span>
+<span class="material-symbols-outlined text-xs text-slate-300" data-icon="chevron_right">chevron_right</span>
+<span class="text-primary font-bold">Appearance</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4 text-slate-500">
+<button class="hover:bg-sky-50/50 p-2 rounded-full transition-colors active:scale-95"><span class="material-symbols-outlined" data-icon="notifications">notifications</span></button>
+<button class="hover:bg-sky-50/50 p-2 rounded-full transition-colors active:scale-95"><span class="material-symbols-outlined" data-icon="dark_mode">dark_mode</span></button>
+<button class="hover:bg-sky-50/50 p-2 rounded-full transition-colors active:scale-95"><span class="material-symbols-outlined" data-icon="settings">settings</span></button>
+</div>
+<div class="flex items-center gap-3 border-l pl-6 border-slate-100">
+<div class="text-right">
+<p class="text-on-surface leading-none mb-1">Admin User</p>
+<p class="text-[10px] text-slate-400 uppercase">Super Admin</p>
+</div>
+<img alt="Admin User Avatar" class="w-10 h-10 rounded-full object-cover" data-alt="portrait of a professional male administrator with a friendly expression in a modern office environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXjFNYrDlMov4ma_mlY1zuYPnOwyXn-W_iSlFX_souJXYADjUuhzG8cBXPp8iQNW-13_enLfyfFPDFRSdk4zMOEV0te6LmpvvYO5XZnajQvO6CP_QAVzIcq-Lkl_YuYv1ho-c9iDBAN5W5SwrsdKPevUHFxKB8vJBSxNNb0DhwfjuHBO1lEfpcOAuiMySar9T9h1TPJobavSke0CZV2p2qlxQPlNzzKUFeL51Y2-HAtujTd5lzEl--n7Bk4h-TUyIMsJyYZdzDNUM2"/>
+</div>
+</div>
+</header>
+<!-- Content Canvas -->
+<div class="mt-16 p-10 max-w-7xl w-full mx-auto">
+<div class="mb-10">
+<h1 class="text-4xl font-extrabold text-on-surface font-headline tracking-tight mb-2">Appearance Settings</h1>
+<p class="text-on-surface-variant">Configure your brand identity and console visual preferences.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- Left Column: Forms -->
+<div class="lg:col-span-7 space-y-8">
+<!-- Brand Identity -->
+<section class="bg-surface-container-low rounded-lg p-8 space-y-6">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary" data-icon="branding_watermark">branding_watermark</span>
+<h2 class="text-xl font-bold font-headline">Brand Identity</h2>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-semibold text-on-surface-variant px-1">Upload Logo</label>
+<div class="bg-white rounded-DEFAULT p-4 border-2 border-dashed border-outline-variant flex flex-col items-center justify-center gap-3 h-40 group hover:border-primary transition-colors cursor-pointer">
+<div class="w-12 h-12 bg-sky-50 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="upload">upload</span>
+</div>
+<span class="text-xs text-slate-400">Current: BirdHaven_Logo.svg</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-semibold text-on-surface-variant px-1">Upload Favicon</label>
+<div class="bg-white rounded-DEFAULT p-4 border-2 border-dashed border-outline-variant flex flex-col items-center justify-center gap-3 h-40 group hover:border-primary transition-colors cursor-pointer">
+<div class="w-12 h-12 bg-sky-50 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="add_photo_alternate">add_photo_alternate</span>
+</div>
+<span class="text-xs text-slate-400">Recommended 32x32px</span>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-semibold text-on-surface-variant px-1">Website Title</label>
+<input class="w-full bg-surface-container-highest border-none rounded-DEFAULT px-4 py-3 focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary transition-all" type="text" value="BirdHaven Admin"/>
+</div>
+</section>
+<!-- Design Theme -->
+<section class="bg-surface-container-low rounded-lg p-8 space-y-6">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary" data-icon="palette">palette</span>
+<h2 class="text-xl font-bold font-headline">Design Theme</h2>
+</div>
+<div class="grid grid-cols-3 gap-4">
+<div class="space-y-2">
+<label class="text-sm font-semibold text-on-surface-variant px-1">Primary</label>
+<div class="flex items-center bg-white rounded-DEFAULT p-2 gap-3 border border-outline-variant/20">
+<div class="w-8 h-8 rounded-md bg-[#0c6780]"></div>
+<input class="text-xs font-mono border-none p-0 w-20 focus:ring-0" type="text" value="#0c6780"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-semibold text-on-surface-variant px-1">Secondary</label>
+<div class="flex items-center bg-white rounded-DEFAULT p-2 gap-3 border border-outline-variant/20">
+<div class="w-8 h-8 rounded-md bg-[#87ceeb]"></div>
+<input class="text-xs font-mono border-none p-0 w-20 focus:ring-0" type="text" value="#87ceeb"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-semibold text-on-surface-variant px-1">Accent</label>
+<div class="flex items-center bg-white rounded-DEFAULT p-2 gap-3 border border-outline-variant/20">
+<div class="w-8 h-8 rounded-md bg-[#016e21]"></div>
+<input class="text-xs font-mono border-none p-0 w-20 focus:ring-0" type="text" value="#016e21"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Typography -->
+<section class="bg-surface-container-low rounded-lg p-8 space-y-6">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary" data-icon="text_fields">text_fields</span>
+<h2 class="text-xl font-bold font-headline">Typography</h2>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-semibold text-on-surface-variant px-1">Font Family</label>
+<select class="w-full bg-surface-container-highest border-none rounded-DEFAULT px-4 py-3 focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary appearance-none">
+<option selected="">Inter (System Default)</option>
+<option>Manrope</option>
+<option>Public Sans</option>
+<option>Outfit</option>
+</select>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center mb-1">
+<label class="text-sm font-semibold text-on-surface-variant px-1">Base Size</label>
+<span class="text-xs font-bold text-primary">16px</span>
+</div>
+<input class="w-full h-2 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary" type="range"/>
+<div class="flex justify-between text-[10px] text-slate-400 px-1">
+<span>12px</span>
+<span>20px</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Corner Roundness -->
+<section class="bg-surface-container-low rounded-lg p-8 space-y-6">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary" data-icon="rounded_corner">rounded_corner</span>
+<h2 class="text-xl font-bold font-headline">Corner Roundness</h2>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center mb-1">
+<label class="text-sm font-semibold text-on-surface-variant px-1">Component Radius</label>
+<span class="text-xs font-bold text-primary">16px</span>
+</div>
+<input class="w-full h-2 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary" max="32" min="0" type="range" value="16"/>
+<div class="grid grid-cols-4 gap-4 pt-4">
+<div class="bg-white h-12 rounded-none border border-slate-100 flex items-center justify-center text-[10px] text-slate-400">None</div>
+<div class="bg-white h-12 rounded-md border border-slate-100 flex items-center justify-center text-[10px] text-slate-400">Small</div>
+<div class="bg-white h-12 rounded-DEFAULT border border-slate-100 flex items-center justify-center text-[10px] text-primary font-bold bg-sky-50/30">Default</div>
+<div class="bg-white h-12 rounded-xl border border-slate-100 flex items-center justify-center text-[10px] text-slate-400">Large</div>
+</div>
+</div>
+</section>
+<!-- Footer Branding -->
+<section class="bg-surface-container-low rounded-lg p-8 space-y-6">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary" data-icon="vertical_align_bottom">vertical_align_bottom</span>
+<h2 class="text-xl font-bold font-headline">Footer Branding</h2>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-semibold text-on-surface-variant px-1">Copyright Text</label>
+<textarea class="w-full bg-surface-container-highest border-none rounded-DEFAULT px-4 py-3 focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary transition-all" rows="2">© 2024 BirdHaven CMS. All Rights Reserved.</textarea>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<label class="text-sm font-semibold text-on-surface-variant px-1">Social Media Links</label>
+<div class="flex items-center bg-white rounded-DEFAULT px-4 py-3 gap-3 border border-outline-variant/10">
+<span class="material-symbols-outlined text-slate-400" data-icon="facebook">social_leaderboard</span>
+<input class="flex-1 border-none p-0 focus:ring-0 text-sm" placeholder="Facebook URL" type="text"/>
+</div>
+<div class="flex items-center bg-white rounded-DEFAULT px-4 py-3 gap-3 border border-outline-variant/10">
+<span class="material-symbols-outlined text-slate-400" data-icon="close">close</span>
+<input class="flex-1 border-none p-0 focus:ring-0 text-sm" placeholder="X (formerly Twitter) URL" type="text"/>
+</div>
+<div class="flex items-center bg-white rounded-DEFAULT px-4 py-3 gap-3 border border-outline-variant/10">
+<span class="material-symbols-outlined text-slate-400" data-icon="photo_camera">photo_camera</span>
+<input class="flex-1 border-none p-0 focus:ring-0 text-sm" placeholder="Instagram URL" type="text"/>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Live Preview -->
+<div class="lg:col-span-5 relative">
+<div class="sticky top-24">
+<div class="bg-white rounded-lg shadow-2xl shadow-sky-900/10 border border-slate-100 overflow-hidden">
+<div class="bg-slate-50 border-b border-slate-100 px-6 py-4 flex items-center justify-between">
+<span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Live Preview</span>
+<div class="flex gap-1.5">
+<div class="w-2.5 h-2.5 rounded-full bg-red-400/20"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-amber-400/20"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-green-400/20"></div>
+</div>
+</div>
+<div class="p-8 space-y-8">
+<div class="space-y-4">
+<h3 class="text-sm font-bold text-slate-500 uppercase">Button Styles</h3>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-white px-6 py-2.5 rounded-DEFAULT font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform">Primary Action</button>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2.5 rounded-DEFAULT font-semibold">Secondary</button>
+</div>
+</div>
+<div class="space-y-4">
+<h3 class="text-sm font-bold text-slate-500 uppercase">Card &amp; Typography</h3>
+<div class="bg-surface-container-low rounded-DEFAULT p-6 border border-outline-variant/10">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 bg-primary-container rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="eco">eco</span>
+</div>
+<div>
+<h4 class="font-bold font-headline">Species Monitoring</h4>
+<p class="text-xs text-on-surface-variant">Active since May 2024</p>
+</div>
+</div>
+<p class="text-sm leading-relaxed text-on-surface mb-4">This is a live preview of your theme settings applied to a standard data component.</p>
+<div class="h-2 w-full bg-slate-200 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-2/3"></div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<h3 class="text-sm font-bold text-slate-500 uppercase">Input States</h3>
+<input class="w-full bg-white border border-primary ring-1 ring-primary rounded-DEFAULT px-4 py-2 text-sm outline-none" placeholder="Focused State" type="text"/>
+</div>
+</div>
+<div class="bg-primary/5 p-6 border-t border-slate-100 text-center">
+<p class="text-[10px] text-primary font-bold uppercase tracking-widest mb-1">Footer Preview</p>
+<p class="text-[10px] text-slate-400 italic">© 2024 BirdHaven CMS. All Rights Reserved.</p>
+</div>
+</div>
+<!-- Atmospheric Depth Ornament -->
+<div class="absolute -bottom-10 -right-10 w-64 h-64 bg-primary/5 blur-3xl rounded-full -z-10"></div>
+<div class="absolute -top-10 -left-10 w-48 h-48 bg-secondary/5 blur-3xl rounded-full -z-10"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Footer Action Bar -->
+<div class="fixed bottom-0 right-0 w-[calc(100%-260px)] bg-white/90 backdrop-blur-md border-t border-slate-100 py-4 px-8 flex justify-between items-center z-50">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></div>
+<span class="text-xs font-medium text-slate-500">Unsaved changes detected in Appearance Settings</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-500 hover:text-slate-900 font-semibold px-6 py-2 transition-colors">Discard</button>
+<button class="bg-primary hover:bg-surface-tint text-white font-bold px-8 py-3 rounded-lg shadow-xl shadow-primary/25 active:scale-95 transition-all">Save Changes</button>
+</div>
+</div>
+<!-- Footer -->
+<footer class="w-full py-6 mt-auto flex justify-between items-center px-8 border-t border-slate-100 dark:border-slate-800/50 font-['Inter'] text-xs tracking-wider uppercase">
+<div class="text-slate-400">© 2024 BirdHaven CMS</div>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-sky-500 hover:underline transition-all" href="#">Documentation</a>
+<a class="text-slate-400 hover:text-sky-500 hover:underline transition-all" href="#">Support</a>
+<span class="text-slate-300 opacity-80">Version 1.2.0</span>
+</div>
+</footer>
+</main>
+</body></html>

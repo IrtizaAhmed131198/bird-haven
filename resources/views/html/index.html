@@ -1,0 +1,566 @@
+<!doctype html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Bird Haven | Ethical Avian Guardianship</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary": "#ffffff",
+              secondary: "#4d653a",
+              "surface-tint": "#00658b",
+              "on-tertiary-fixed": "#002021",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-container": "#005778",
+              "tertiary-container": "#9bcdcf",
+              "primary-fixed": "#c4e7ff",
+              "on-tertiary-fixed-variant": "#1a4e50",
+              "on-secondary-fixed": "#0c2000",
+              "on-error-container": "#93000a",
+              "on-surface": "#191c1d",
+              outline: "#6f787d",
+              "on-secondary-fixed-variant": "#364d24",
+              "surface-dim": "#d9dadb",
+              "secondary-container": "#cfecb4",
+              "on-primary-fixed-variant": "#004c69",
+              "surface-bright": "#f8f9fa",
+              "on-tertiary-container": "#27585a",
+              "outline-variant": "#bfc8cd",
+              error: "#ba1a1a",
+              surface: "#f8f9fa",
+              "secondary-fixed": "#cfecb4",
+              "inverse-primary": "#7cd0ff",
+              "tertiary-fixed": "#b9ecee",
+              "inverse-on-surface": "#f0f1f2",
+              "on-primary-fixed": "#001e2c",
+              "secondary-fixed-dim": "#b3cf9a",
+              tertiary: "#356668",
+              primary: "#00658b",
+              "inverse-surface": "#2e3132",
+              "primary-fixed-dim": "#7cd0ff",
+              "primary-container": "#77cefe",
+              "surface-container-highest": "#e1e3e4",
+              "on-secondary": "#ffffff",
+              "tertiary-fixed-dim": "#9ecfd1",
+              "on-error": "#ffffff",
+              "surface-container-high": "#e7e8e9",
+              "on-surface-variant": "#3f484c",
+              "on-tertiary": "#ffffff",
+              "error-container": "#ffdad6",
+              background: "#f8f9fa",
+              "on-background": "#191c1d",
+              "surface-variant": "#e1e3e4",
+              "surface-container": "#edeeef",
+              "surface-container-low": "#f3f4f5",
+              "on-secondary-container": "#536b3f",
+            },
+            fontFamily: {
+              headline: ["Manrope"],
+              body: ["Plus Jakarta Sans"],
+              label: ["Plus Jakarta Sans"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "2rem",
+              xl: "3rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+      body {
+        -webkit-font-smoothing: antialiased;
+        background-color: #f8f9fa;
+      }
+      .ethereal-shadow { box-shadow: 0 20px 40px rgba(25, 28, 29, 0.06); }
+      .bg-gradient-primary { background: linear-gradient(135deg, #00658b 0%, #77cefe 100%); }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+  </head>
+  <body class="font-body text-on-surface">
+
+    <!-- ===================== TOP NAV ===================== -->
+    <!-- Desktop Nav -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(25,28,29,0.06)]">
+      <!-- Desktop -->
+      <div class="hidden md:flex items-center justify-between px-12 py-4 max-w-[1440px] mx-auto w-full">
+        <div class="text-2xl font-bold tracking-tighter text-slate-900 font-headline">Bird Haven</div>
+        <div class="flex items-center space-x-10 font-headline tracking-tight">
+          <a class="text-sky-700 font-semibold border-b-2 border-sky-600 hover:-translate-y-0.5 transition-transform duration-300" href="#">Sanctuary</a>
+          <a class="text-slate-600 hover:text-slate-900 hover:-translate-y-0.5 transition-transform duration-300" href="#">Species</a>
+          <a class="text-slate-600 hover:text-slate-900 hover:-translate-y-0.5 transition-transform duration-300" href="#">Care</a>
+          <a class="text-slate-600 hover:text-slate-900 hover:-translate-y-0.5 transition-transform duration-300" href="#">Journal</a>
+        </div>
+        <div class="flex items-center space-x-6">
+          <div class="relative hidden lg:block">
+            <input class="bg-surface-container-low border-none rounded-full px-6 py-2 w-64 text-sm focus:ring-2 focus:ring-primary/20 outline-none" placeholder="Search the archive..." type="text" />
+          </div>
+          <button class="text-slate-600 hover:text-primary transition-colors"><span class="material-symbols-outlined">person</span></button>
+          <button class="text-slate-600 hover:text-primary transition-colors"><span class="material-symbols-outlined">shopping_bag</span></button>
+        </div>
+      </div>
+      <!-- Mobile -->
+      <div class="flex md:hidden items-center justify-between px-6 py-4">
+        <h1 class="text-xl font-bold tracking-tighter text-slate-900 font-headline">Bird Haven</h1>
+        <div class="flex gap-4">
+          <button class="text-sky-700"><span class="material-symbols-outlined">person</span></button>
+          <button class="text-sky-700"><span class="material-symbols-outlined">shopping_bag</span></button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===================== MAIN CONTENT ===================== -->
+    <main class="pt-16 md:pt-20 pb-32 md:pb-0">
+
+      <!-- ===== HERO ===== -->
+      <!-- Desktop Hero -->
+      <header class="hidden md:block pt-8 pb-12 px-12 max-w-[1440px] mx-auto">
+        <div class="relative h-[700px] rounded-xl overflow-hidden group">
+          <img alt="Vibrant Macaw" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000"
+            src="images/banner.png" />
+          <div class="absolute inset-0 bg-gradient-to-r from-on-surface/60 via-transparent to-transparent flex flex-col justify-center px-20">
+            <span class="text-primary-fixed uppercase tracking-[0.3em] font-bold text-sm mb-6">Established 1984</span>
+            <h1 class="font-headline text-7xl font-extrabold text-white leading-[1.1] max-w-2xl mb-8">
+              Elevating the Art of <span class="text-primary-container">Avian Companionship</span>
+            </h1>
+            <p class="text-surface-container-low text-xl max-w-lg mb-10 leading-relaxed">A curated sanctuary for the world's most magnificent birds and their guardians. Ethical, sustainable, and devoted to flight.</p>
+            <div class="flex gap-4">
+              <button class="bg-gradient-primary text-white px-10 py-5 rounded-full font-semibold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">Explore Species</button>
+              <button class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-5 rounded-full font-semibold hover:bg-white/20 transition-all">The Archive</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Mobile Hero -->
+      <section class="md:hidden px-6 mb-10 pt-4">
+        <div class="relative h-[500px] w-full rounded-xl overflow-hidden shadow-2xl group">
+          <img alt="Resplendent Quetzal" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf2M0W9uaOzLlrURex9zRh1jkaAGwmLaaBfB9dZ7Zb8FFJo--EO_5bHn2Rnkh-bZmds3jLg65084Vz_ag3dYGSghPYbRWOS5Ripe5TY_BK9t2lDm5vjQo4EhhKWQCiSqNejfvyPWI09GR0OtGKJoufC0XyTjIHUW_sGuq9epw_ilD_uGWtmq5MRqXwGoK1Jem7u4FrfM7PYz65pkTHjoc3swie3Yf3wYblrFv9L_Jo7mHcQd_hzRSVjMZr1WJK0tkPOtje4x2yVdqS" />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex flex-col justify-end p-8">
+            <span class="text-primary-container font-headline font-bold tracking-widest text-xs uppercase mb-3">Seasonal Spotlight</span>
+            <h2 class="text-4xl font-headline font-extrabold text-white leading-tight mb-4">Majesty of the High Canopy</h2>
+            <p class="text-white/80 text-sm mb-6 max-w-[280px]">Experience the rare elegance of our newest sanctuary inhabitants from the cloud forests.</p>
+            <button class="bg-gradient-to-r from-primary to-primary-container text-white font-semibold py-4 px-8 rounded-full shadow-lg self-start active:scale-95 transition-transform">Explore Sanctuary</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mobile Search -->
+      <section class="md:hidden px-6 mb-10">
+        <div class="relative flex items-center">
+          <div class="absolute left-4 text-slate-400"><span class="material-symbols-outlined">search</span></div>
+          <input class="w-full bg-white border-none rounded-xl py-5 pl-12 pr-4 shadow-[0_10px_30px_rgba(0,0,0,0.02)] focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-slate-400 outline-none" placeholder="Find your avian companion..." type="text" />
+        </div>
+      </section>
+
+      <!-- Mobile Category Quick Access -->
+      <section class="md:hidden px-6 mb-12">
+        <div class="flex items-center justify-between mb-6">
+          <h3 class="font-headline font-bold text-xl tracking-tight">Explore Species</h3>
+          <button class="text-primary font-semibold text-sm">View All</button>
+        </div>
+        <div class="flex gap-6 overflow-x-auto no-scrollbar pb-2">
+          <div class="flex flex-col items-center gap-3 shrink-0">
+            <div class="w-20 h-20 rounded-full bg-secondary-container flex items-center justify-center shadow-sm">
+              <span class="material-symbols-outlined text-on-secondary-container text-3xl">forest</span>
+            </div>
+            <span class="text-xs font-bold text-slate-600">Parrots</span>
+          </div>
+          <div class="flex flex-col items-center gap-3 shrink-0">
+            <div class="w-20 h-20 rounded-full bg-primary-fixed flex items-center justify-center shadow-sm">
+              <span class="material-symbols-outlined text-on-primary-fixed-variant text-3xl">waves</span>
+            </div>
+            <span class="text-xs font-bold text-slate-600">Aquatic</span>
+          </div>
+          <div class="flex flex-col items-center gap-3 shrink-0">
+            <div class="w-20 h-20 rounded-full bg-tertiary-fixed flex items-center justify-center shadow-sm">
+              <span class="material-symbols-outlined text-on-tertiary-fixed-variant text-3xl">air</span>
+            </div>
+            <span class="text-xs font-bold text-slate-600">Raptors</span>
+          </div>
+          <div class="flex flex-col items-center gap-3 shrink-0">
+            <div class="w-20 h-20 rounded-full bg-surface-container-highest flex items-center justify-center shadow-sm">
+              <span class="material-symbols-outlined text-on-surface-variant text-3xl">eco</span>
+            </div>
+            <span class="text-xs font-bold text-slate-600">Songbirds</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== DESKTOP: Category Bento Grid ===== -->
+      <section class="hidden md:block py-20 px-12 max-w-[1440px] mx-auto">
+        <div class="flex justify-between items-end mb-12">
+          <div>
+            <h2 class="font-headline text-4xl font-bold mb-2">Curated Collections</h2>
+            <p class="text-on-surface-variant">Find the perfect companion or care essentials.</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-6">
+          <div class="md:col-span-2 lg:col-span-3 bg-secondary-container rounded-xl p-8 flex flex-col justify-between relative overflow-hidden group">
+            <div class="relative z-10">
+              <h3 class="text-3xl font-bold text-on-secondary-container mb-2">Budgies</h3>
+              <p class="text-on-secondary-container/80 max-w-xs">Intelligent, playful, and brilliantly colored small companions.</p>
+              <button class="mt-6 text-on-secondary-container font-bold flex items-center gap-2 group-hover:gap-4 transition-all">
+                Discover <span class="material-symbols-outlined">arrow_forward</span>
+              </button>
+            </div>
+            <img alt="Budgie" class="absolute right-[-20%] bottom-[-10%] w-2/3 object-contain transform group-hover:scale-110 transition-transform duration-700"
+              src="images/collection.png" />
+          </div>
+          <div class="bg-surface-container-high rounded-xl p-6 flex flex-col items-center justify-center text-center group hover:bg-primary-container transition-colors duration-500">
+            <div class="bg-white p-4 rounded-full mb-4 ethereal-shadow group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-primary scale-150">flutter_dash</span>
+            </div>
+            <span class="font-bold">Parrots</span>
+          </div>
+          <div class="bg-surface-container-high rounded-xl p-6 flex flex-col items-center justify-center text-center group hover:bg-tertiary-container transition-colors duration-500">
+            <div class="bg-white p-4 rounded-full mb-4 ethereal-shadow group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-tertiary scale-150">nest_cam_indoor</span>
+            </div>
+            <span class="font-bold">Finches</span>
+          </div>
+          <div class="bg-surface-container-high rounded-xl p-6 flex flex-col items-center justify-center text-center group hover:bg-secondary-container transition-colors duration-500">
+            <div class="bg-white p-4 rounded-full mb-4 ethereal-shadow group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-secondary scale-150">house</span>
+            </div>
+            <span class="font-bold">Cages</span>
+          </div>
+          <div class="lg:col-span-2 bg-primary-fixed rounded-xl p-8 flex items-center justify-between overflow-hidden group">
+            <div>
+              <h3 class="text-2xl font-bold text-on-primary-fixed mb-1">Dietary</h3>
+              <p class="text-on-primary-fixed/70 text-sm">Ethical sourcing, superior nutrition.</p>
+            </div>
+            <span class="material-symbols-outlined text-primary text-6xl opacity-20 group-hover:opacity-40 transition-opacity">restaurant</span>
+          </div>
+          <div class="lg:col-span-1 bg-surface-container-low rounded-xl p-6 flex flex-col items-center justify-center group">
+            <span class="material-symbols-outlined text-4xl mb-2 text-outline">more_horiz</span>
+            <span class="text-sm font-semibold">View All</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== FEATURED BIRDS ===== -->
+      <!-- Desktop grid -->
+      <section class="hidden md:block bg-surface-container-low py-24 px-12">
+        <div class="max-w-[1440px] mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="font-headline text-5xl font-extrabold mb-4">Featured Residents</h2>
+            <div class="w-24 h-1 bg-gradient-primary mx-auto rounded-full"></div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            <!-- Card 1 -->
+            <div class="bg-surface-container-lowest rounded-xl p-4 ethereal-shadow group">
+              <div class="relative rounded-lg overflow-hidden mb-6 h-64">
+                <img alt="Blue Macaw" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  src="images/parrot-1.png" />
+                <button class="absolute top-4 right-4 bg-white/80 backdrop-blur-md p-2 rounded-full hover:bg-white transition-colors">
+                  <span class="material-symbols-outlined text-sm">favorite</span>
+                </button>
+              </div>
+              <div class="px-2">
+                <div class="flex justify-between items-start mb-2">
+                  <div><h3 class="font-bold text-lg">Hyacinth Macaw</h3><p class="text-sm text-on-surface-variant">Juvenile, Hand-raised</p></div>
+                  <span class="text-primary font-bold">$4,200</span>
+                </div>
+                <button class="w-full mt-4 bg-surface-container-high hover:bg-primary hover:text-white py-3 rounded-lg font-semibold transition-all duration-300">View Heritage</button>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-surface-container-lowest rounded-xl p-4 ethereal-shadow group">
+              <div class="relative rounded-lg overflow-hidden mb-6 h-64">
+                <img alt="African Grey" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  src="images/parrot-2.png" />
+                <button class="absolute top-4 right-4 bg-white/80 backdrop-blur-md p-2 rounded-full hover:bg-white transition-colors">
+                  <span class="material-symbols-outlined text-sm">favorite</span>
+                </button>
+              </div>
+              <div class="px-2">
+                <div class="flex justify-between items-start mb-2">
+                  <div><h3 class="font-bold text-lg">African Grey</h3><p class="text-sm text-on-surface-variant">Intellectual Bond</p></div>
+                  <span class="text-primary font-bold">$2,800</span>
+                </div>
+                <button class="w-full mt-4 bg-surface-container-high hover:bg-primary hover:text-white py-3 rounded-lg font-semibold transition-all duration-300">View Heritage</button>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-surface-container-lowest rounded-xl p-4 ethereal-shadow group">
+              <div class="relative rounded-lg overflow-hidden mb-6 h-64">
+                <img alt="Sun Conure" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  src="images/parrot-3.png" />
+                <button class="absolute top-4 right-4 bg-white/80 backdrop-blur-md p-2 rounded-full hover:bg-white transition-colors">
+                  <span class="material-symbols-outlined text-sm">favorite</span>
+                </button>
+              </div>
+              <div class="px-2">
+                <div class="flex justify-between items-start mb-2">
+                  <div><h3 class="font-bold text-lg">Sun Conure</h3><p class="text-sm text-on-surface-variant">Vibrant Energy</p></div>
+                  <span class="text-primary font-bold">$950</span>
+                </div>
+                <button class="w-full mt-4 bg-surface-container-high hover:bg-primary hover:text-white py-3 rounded-lg font-semibold transition-all duration-300">View Heritage</button>
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="bg-surface-container-lowest rounded-xl p-4 ethereal-shadow group">
+              <div class="relative rounded-lg overflow-hidden mb-6 h-64">
+                <img alt="Cockatoo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  src="images/parrot-4.png" />
+                <button class="absolute top-4 right-4 bg-white/80 backdrop-blur-md p-2 rounded-full hover:bg-white transition-colors">
+                  <span class="material-symbols-outlined text-sm">favorite</span>
+                </button>
+              </div>
+              <div class="px-2">
+                <div class="flex justify-between items-start mb-2">
+                  <div><h3 class="font-bold text-lg">Umbrella Cockatoo</h3><p class="text-sm text-on-surface-variant">Social &amp; Gentle</p></div>
+                  <span class="text-primary font-bold">$3,500</span>
+                </div>
+                <button class="w-full mt-4 bg-surface-container-high hover:bg-primary hover:text-white py-3 rounded-lg font-semibold transition-all duration-300">View Heritage</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mobile Featured Collections -->
+      <section class="md:hidden px-6 mb-12">
+        <h3 class="font-headline font-bold text-xl tracking-tight mb-6">Featured Collections</h3>
+        <div class="grid grid-cols-1 gap-8">
+          <div class="bg-white rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
+            <div class="h-[280px] w-full overflow-hidden relative">
+              <img alt="Scarlet Macaw" class="w-full h-full object-cover"
+                src="images/parrot-5.png" />
+              <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-primary uppercase tracking-widest">Ethically Sourced</div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h4 class="font-headline font-bold text-lg text-slate-900">Scarlet Macaw</h4>
+                <span class="text-primary font-bold">$2,400</span>
+              </div>
+              <p class="text-slate-500 text-sm mb-4 leading-relaxed line-clamp-2">Intelligent and social companions known for their vibrant plumage and remarkable longevity.</p>
+              <div class="flex gap-2">
+                <span class="bg-slate-100 px-3 py-1 rounded-md text-[10px] font-bold text-slate-500 uppercase">Tropical</span>
+                <span class="bg-slate-100 px-3 py-1 rounded-md text-[10px] font-bold text-slate-500 uppercase">Social</span>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
+            <div class="h-[280px] w-full overflow-hidden relative">
+              <img alt="Cerulean Kingfisher" class="w-full h-full object-cover"
+                src="images/parrot-6.png" />
+              <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-primary uppercase tracking-widest">Rare Observation</div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h4 class="font-headline font-bold text-lg text-slate-900">Cerulean Kingfisher</h4>
+                <span class="text-primary font-bold">$1,200</span>
+              </div>
+              <p class="text-slate-500 text-sm mb-4 leading-relaxed line-clamp-2">The jewel of the riverbanks, these birds require specialized care and serene environments.</p>
+              <div class="flex gap-2">
+                <span class="bg-slate-100 px-3 py-1 rounded-md text-[10px] font-bold text-slate-500 uppercase">Aquatic</span>
+                <span class="bg-slate-100 px-3 py-1 rounded-md text-[10px] font-bold text-slate-500 uppercase">Prestige</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TESTIMONIALS (Desktop only) ===== -->
+      <section class="hidden md:block py-24 px-12 max-w-[1440px] mx-auto overflow-hidden">
+        <div class="flex flex-col md:flex-row gap-20 items-center">
+          <div class="w-full md:w-1/2 relative">
+            <div class="absolute -top-10 -left-10 w-40 h-40 bg-secondary-container/30 rounded-full blur-3xl"></div>
+            <div class="relative z-10 p-12 bg-white rounded-xl ethereal-shadow">
+              <span class="material-symbols-outlined text-6xl text-primary/20 mb-6" style="font-variation-settings:'FILL' 1">format_quote</span>
+              <p class="text-2xl font-medium leading-relaxed mb-10 text-on-surface">"The level of expertise and care at Bird Haven is unparalleled. They didn't just sell me a bird; they introduced me to a new family member and provided a lifetime of support."</p>
+              <div class="flex items-center gap-4">
+                <img alt="Customer Profile" class="w-16 h-16 rounded-full object-cover"
+                  src="images/user.png" />
+                <div>
+                  <h4 class="font-bold text-lg">Elena Richardson</h4>
+                  <p class="text-on-surface-variant text-sm">Avian Enthusiast since 2012</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/2">
+            <span class="text-primary uppercase tracking-widest font-bold text-sm mb-4 block">The Community</span>
+            <h2 class="font-headline text-5xl font-extrabold mb-8">Trusted by Guardians Worldwide</h2>
+            <p class="text-on-surface-variant text-lg mb-10 leading-relaxed">We believe in ethical guardianship. Every bird in our care is raised with the utmost attention to psychological and physical health, ensuring a seamless transition to their forever homes.</p>
+            <div class="flex gap-12">
+              <div>
+                <span class="block text-4xl font-extrabold text-primary mb-1">15k+</span>
+                <span class="text-sm font-semibold text-outline uppercase tracking-wider">Success Stories</span>
+              </div>
+              <div>
+                <span class="block text-4xl font-extrabold text-secondary mb-1">40+</span>
+                <span class="text-sm font-semibold text-outline uppercase tracking-wider">Years Experience</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ACCESSORIES (Desktop) ===== -->
+      <section class="hidden md:block py-24 px-12 bg-white">
+        <div class="max-w-[1440px] mx-auto">
+          <div class="flex justify-between items-end mb-12">
+            <h2 class="font-headline text-4xl font-bold">Essential Accoutrements</h2>
+            <a class="text-primary font-bold hover:underline" href="#">Shop All Accessories</a>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="flex gap-6 items-center p-6 bg-surface-container rounded-xl group hover:bg-surface-container-high transition-colors">
+              <div class="w-32 h-32 rounded-lg bg-white overflow-hidden flex-shrink-0">
+                <img alt="Bird Cage" class="w-full h-full object-cover group-hover:scale-110 transition-transform"
+                  src="images/bird-cage.png" />
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-1">Skyline Habitat</h3>
+                <p class="text-sm text-on-surface-variant mb-3">Architectural design for flight freedom.</p>
+                <span class="font-bold text-primary">$499</span>
+              </div>
+            </div>
+            <div class="flex gap-6 items-center p-6 bg-surface-container rounded-xl group hover:bg-surface-container-high transition-colors">
+              <div class="w-32 h-32 rounded-lg bg-white overflow-hidden flex-shrink-0">
+                <img alt="Bird Food" class="w-full h-full object-cover group-hover:scale-110 transition-transform"
+                  src="images/bird-food.png" />
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-1">Gourmet Reserve</h3>
+                <p class="text-sm text-on-surface-variant mb-3">Organic, high-protein vitality mix.</p>
+                <span class="font-bold text-primary">$35</span>
+              </div>
+            </div>
+            <div class="flex gap-6 items-center p-6 bg-surface-container rounded-xl group hover:bg-surface-container-high transition-colors">
+              <div class="w-32 h-32 rounded-lg bg-white overflow-hidden flex-shrink-0">
+                <img alt="Bird Toys" class="w-full h-full object-cover group-hover:scale-110 transition-transform"
+                  src="images/bird-toys.png" />
+              </div>
+              <div>
+                <h3 class="font-bold text-lg mb-1">Cognitive Cluster</h3>
+                <p class="text-sm text-on-surface-variant mb-3">Puzzle-solving toy for intellect.</p>
+                <span class="font-bold text-primary">$28</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mobile Newsletter -->
+      <section class="md:hidden mx-6 p-8 rounded-xl bg-secondary-container/30 mb-12">
+        <h3 class="font-headline font-bold text-xl mb-3">Avian Care Journal</h3>
+        <p class="text-slate-600 text-sm mb-6 leading-relaxed">Join our circle of ethical guardians. Receive weekly insights on avian health, nutrition, and sanctuary updates.</p>
+        <div class="flex flex-col gap-3">
+          <input class="w-full bg-white/60 border-none rounded-xl py-4 px-4 text-sm focus:ring-secondary/20 outline-none" placeholder="Your email address" type="email" />
+          <button class="bg-secondary text-white font-bold py-4 rounded-xl active:scale-95 transition-transform">Subscribe to Journal</button>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <!-- Desktop Footer -->
+    <footer class="hidden md:block bg-slate-50 w-full pt-20 pb-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 max-w-[1440px] mx-auto">
+        <div class="col-span-1">
+          <div class="text-xl font-black text-slate-900 mb-6">Bird Haven</div>
+          <p class="text-slate-500 mb-8 max-w-xs leading-relaxed">Dedicated to the preservation and ethical companionship of exotic avian species since 1984.</p>
+          <div class="flex gap-4">
+            <a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+              <span class="material-symbols-outlined text-xl">share</span>
+            </a>
+            <a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+              <span class="material-symbols-outlined text-xl">mail</span>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-bold text-slate-900 mb-6">Information</h4>
+          <ul class="space-y-4 text-sm">
+            <li><a class="text-slate-500 hover:text-sky-600 transition-colors" href="#">Privacy Policy</a></li>
+            <li><a class="text-slate-500 hover:text-sky-600 transition-colors" href="#">Ethical Sourcing</a></li>
+            <li><a class="text-slate-500 hover:text-sky-600 transition-colors" href="#">Shipping</a></li>
+            <li><a class="text-slate-500 hover:text-sky-600 transition-colors" href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-slate-900 mb-6">The Sanctuary</h4>
+          <ul class="space-y-4 text-sm">
+            <li><a class="text-slate-500 hover:text-sky-600 transition-colors" href="#">Avian Health Care</a></li>
+            <li><a class="text-slate-500 hover:text-sky-600 transition-colors" href="#">Our Hatchery</a></li>
+            <li><a class="text-slate-500 hover:text-sky-600 transition-colors" href="#">Training Programs</a></li>
+            <li><a class="text-slate-500 hover:text-sky-600 transition-colors" href="#">Archive Journal</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-slate-900 mb-6">Join The Archive</h4>
+          <p class="text-slate-500 text-sm mb-4 leading-relaxed">Receive curated insights into rare species and care tips.</p>
+          <div class="flex flex-col gap-3">
+            <input class="bg-white border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-primary/20 outline-none" placeholder="Your email address" type="email" />
+            <button class="bg-primary text-white py-3 rounded-xl font-bold text-sm hover:opacity-90 transition-opacity">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="mt-20 pt-8 border-t border-slate-200 px-12 max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-slate-400 text-sm">© 2024 Bird Haven. Ethical Avian Guardianship.</p>
+        <div class="flex gap-8">
+          <span class="text-slate-400 text-xs">Terms of Service</span>
+          <span class="text-slate-400 text-xs">Accessibility</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile Footer -->
+    <footer class="md:hidden bg-slate-50 w-full pt-12 pb-24 px-6 border-t border-slate-100">
+      <div class="mb-8">
+        <span class="text-xl font-black text-slate-900 font-headline">Bird Haven</span>
+        <p class="text-slate-500 text-sm mt-2">© 2024 Bird Haven. Ethical Avian Guardianship.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-8 mb-8">
+        <div class="flex flex-col gap-3">
+          <span class="font-bold text-xs uppercase tracking-widest text-slate-400">Legal</span>
+          <a class="text-slate-500 text-sm hover:text-sky-600 transition-colors" href="#">Privacy Policy</a>
+          <a class="text-slate-500 text-sm hover:text-sky-600 transition-colors" href="#">Ethical Sourcing</a>
+        </div>
+        <div class="flex flex-col gap-3">
+          <span class="font-bold text-xs uppercase tracking-widest text-slate-400">Support</span>
+          <a class="text-slate-500 text-sm hover:text-sky-600 transition-colors" href="#">Shipping</a>
+          <a class="text-slate-500 text-sm hover:text-sky-600 transition-colors" href="#">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===================== BOTTOM NAV (Mobile only) ===================== -->
+    <nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 pb-8 pt-4 bg-white/90 backdrop-blur-xl shadow-[0_-10px_30px_rgba(0,0,0,0.04)] rounded-t-[3rem]">
+      <a class="flex flex-col items-center justify-center bg-sky-100 text-sky-800 rounded-full px-5 py-2 active:scale-95 transition-transform" href="#">
+        <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">home</span>
+        <span class="text-[11px] font-medium mt-0.5">Home</span>
+      </a>
+      <a class="flex flex-col items-center justify-center text-slate-500 active:scale-95 transition-transform" href="#">
+        <span class="material-symbols-outlined">search</span>
+        <span class="text-[11px] font-medium mt-0.5">Search</span>
+      </a>
+      <a class="flex flex-col items-center justify-center text-slate-500 active:scale-95 transition-transform" href="#">
+        <span class="material-symbols-outlined">flutter_dash</span>
+        <span class="text-[11px] font-medium mt-0.5">Birds</span>
+      </a>
+      <a class="flex flex-col items-center justify-center text-slate-500 active:scale-95 transition-transform" href="#">
+        <span class="material-symbols-outlined">person</span>
+        <span class="text-[11px] font-medium mt-0.5">Profile</span>
+      </a>
+    </nav>
+
+  </body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#eff1f2",
+                    "on-surface-variant": "#3f484c",
+                    "on-secondary-fixed": "#091d2e",
+                    "background": "#f8fafb",
+                    "on-tertiary-container": "#005f1b",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#d1e4fb",
+                    "secondary": "#4e6073",
+                    "tertiary-container": "#7cd97e",
+                    "on-tertiary-fixed-variant": "#005316",
+                    "surface-tint": "#0c6780",
+                    "secondary-container": "#cfe2f9",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "outline-variant": "#bfc8cd",
+                    "outline": "#6f787d",
+                    "inverse-surface": "#2e3132",
+                    "primary": "#0c6780",
+                    "tertiary-fixed": "#99f899",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-highest": "#e1e3e4",
+                    "inverse-primary": "#89d0ed",
+                    "on-tertiary-fixed": "#002105",
+                    "surface-dim": "#d8dadb",
+                    "primary-container": "#87ceeb",
+                    "surface-container": "#eceeef",
+                    "surface-container-high": "#e6e8e9",
+                    "on-error-container": "#93000a",
+                    "primary-fixed-dim": "#89d0ed",
+                    "tertiary-fixed-dim": "#7edb7f",
+                    "on-primary-container": "#005870",
+                    "on-secondary-container": "#526478",
+                    "surface-container-low": "#f2f4f5",
+                    "primary-fixed": "#baeaff",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed-variant": "#004d62",
+                    "on-primary-fixed": "#001f29",
+                    "on-background": "#191c1d",
+                    "secondary-fixed-dim": "#b5c8df",
+                    "surface-bright": "#f8fafb",
+                    "surface-variant": "#e1e3e4",
+                    "tertiary": "#016e21",
+                    "error-container": "#ffdad6",
+                    "on-surface": "#191c1d",
+                    "on-secondary-fixed-variant": "#36485b",
+                    "on-secondary": "#ffffff",
+                    "surface": "#f8fafb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface flex overflow-hidden">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-screen w-[260px] z-50 bg-slate-900 flex flex-col py-6 overflow-y-auto shadow-2xl shadow-black/20 font-['Inter'] text-sm antialiased">
+<div class="px-6 mb-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary-container flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="flutter_dash">flutter_dash</span>
+</div>
+<div>
+<div class="text-lg font-black text-white font-['Manrope']">BirdHaven</div>
+<div class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Management Console</div>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="text-slate-400 hover:text-slate-200 px-6 py-3 flex items-center gap-3 hover:bg-slate-800 transition-all duration-300 active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="text-slate-400 hover:text-slate-200 px-6 py-3 flex items-center gap-3 hover:bg-slate-800 transition-all duration-300 active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span>Orders</span>
+</a>
+<a class="relative text-white font-medium before:absolute before:left-0 before:w-1 before:h-8 before:bg-gradient-to-b before:from-sky-400 before:to-sky-600 before:rounded-r-full bg-white/5 px-6 py-3 flex items-center gap-3 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="flutter_dash">flutter_dash</span>
+<span>Birds</span>
+</a>
+<a class="text-slate-400 hover:text-slate-200 px-6 py-3 flex items-center gap-3 hover:bg-slate-800 transition-all duration-300 active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="category">category</span>
+<span>Categories</span>
+</a>
+<a class="text-slate-400 hover:text-slate-200 px-6 py-3 flex items-center gap-3 hover:bg-slate-800 transition-all duration-300 active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span>Users</span>
+</a>
+<a class="text-slate-400 hover:text-slate-200 px-6 py-3 flex items-center gap-3 hover:bg-slate-800 transition-all duration-300 active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="rate_review">rate_review</span>
+<span>Reviews</span>
+</a>
+<a class="text-slate-400 hover:text-slate-200 px-6 py-3 flex items-center gap-3 hover:bg-slate-800 transition-all duration-300 active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span>CMS Pages</span>
+</a>
+<a class="text-slate-400 hover:text-slate-200 px-6 py-3 flex items-center gap-3 hover:bg-slate-800 transition-all duration-300 active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span>Homepage</span>
+</a>
+<a class="text-slate-400 hover:text-slate-200 px-6 py-3 flex items-center gap-3 hover:bg-slate-800 transition-all duration-300 active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="perm_media">perm_media</span>
+<span>Media</span>
+</a>
+<a class="text-slate-400 hover:text-slate-200 px-6 py-3 flex items-center gap-3 hover:bg-slate-800 transition-all duration-300 active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+<a class="text-slate-400 hover:text-slate-200 px-6 py-3 flex items-center gap-3 hover:bg-slate-800 transition-all duration-300 active:translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span>SEO</span>
+</a>
+</nav>
+<div class="px-6 mt-8">
+<button class="w-full py-3 bg-gradient-to-r from-primary to-primary-container text-white rounded-xl font-semibold flex items-center justify-center gap-2 shadow-lg shadow-primary/20 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+                Add New Bird
+            </button>
+</div>
+<div class="mt-auto pt-6 border-t border-slate-800/50">
+<a class="text-slate-400 hover:text-red-400 px-6 py-3 flex items-center gap-3 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span>Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-[260px] flex-1 flex flex-col min-h-screen relative overflow-y-auto">
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 w-[calc(100%-260px)] h-16 z-40 bg-white/80 backdrop-blur-md flex justify-between items-center px-8 shadow-sm shadow-sky-500/5 font-['Manrope'] font-semibold text-sm tracking-tight">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm" data-icon="search">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-full py-2 pl-10 pr-4 text-xs focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all outline-none" placeholder="Search birds, species, SKUs..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full text-slate-500 hover:bg-sky-50/50 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full text-slate-500 hover:bg-sky-50/50 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="dark_mode">dark_mode</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full text-slate-500 hover:bg-sky-50/50 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="h-8 w-[1px] bg-slate-200 mx-2"></div>
+<div class="flex items-center gap-3">
+<div class="text-right hidden sm:block">
+<p class="text-slate-900 text-xs font-bold">Admin User</p>
+<p class="text-slate-500 text-[10px]">Super Admin</p>
+</div>
+<img alt="Admin User Avatar" class="w-8 h-8 rounded-full border border-primary-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSKo8fYmKXZFMjQI0i0a_YzpbBV35ekE354odRSEo8y-wkrQwG-qMNZ1-Tw--og1-qo2NhUWcYGyn_X0Q0k-R_twRLqPWuwZcvZcffaLjBTjOTvjTZc-F9StXZxWOFGAu6Dfm5rGyPuito2kcfpSW_t-ru0-gfAGF1T1nwF1vo7jDvKclDVkd3AMwMkSpucN8X758NCBhQky3gLKSUclZLbR3YhSts-WslM15N7DyhcAB2t1Vt4hy2Wgex1NB_x9HeSWKYUEIqIasb"/>
+</div>
+</div>
+</header>
+<!-- Body -->
+<div class="mt-16 p-8 flex flex-col gap-8 flex-1">
+<!-- Page Header Section -->
+<div class="flex justify-between items-end">
+<div>
+<nav class="flex text-[10px] font-bold text-slate-400 uppercase tracking-widest gap-2 mb-2">
+<a class="hover:text-primary transition-colors" href="#">Inventory</a>
+<span>/</span>
+<span class="text-primary-container">Birds</span>
+</nav>
+<h1 class="text-4xl font-extrabold text-slate-900 tracking-tight">Birds Inventory</h1>
+</div>
+<button class="px-6 py-3.5 bg-gradient-to-r from-primary to-primary-container text-white rounded-xl font-bold flex items-center gap-2 shadow-xl shadow-primary/20 hover:shadow-primary/30 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                    Add New Bird
+                </button>
+</div>
+<!-- Dashboard Content Layout -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Filters Column -->
+<aside class="col-span-12 lg:col-span-3 space-y-6">
+<div class="bg-white p-6 rounded-lg shadow-sm border border-slate-100/50">
+<h3 class="text-sm font-bold text-slate-900 mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="filter_list">filter_list</span>
+                            Filter Inventory
+                        </h3>
+<div class="space-y-6">
+<!-- Species Dropdown -->
+<div>
+<label class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2 block">Species</label>
+<select class="w-full bg-slate-50 border-none rounded-lg text-sm text-slate-700 focus:ring-2 focus:ring-primary/20 py-3 px-4">
+<option>All Species</option>
+<option>Hyacinth Macaw</option>
+<option>Toco Toucan</option>
+<option>African Grey</option>
+<option>Gouldian Finch</option>
+</select>
+</div>
+<!-- Price Range -->
+<div>
+<div class="flex justify-between items-center mb-2">
+<label class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Price Range</label>
+<span class="text-[11px] font-bold text-primary">$0 - $15,000</span>
+</div>
+<input class="w-full accent-primary h-1.5 bg-slate-100 rounded-lg appearance-none cursor-pointer" type="range"/>
+<div class="flex justify-between mt-2 text-[10px] text-slate-400 font-medium">
+<span>$0</span>
+<span>$15k+</span>
+</div>
+</div>
+<!-- Stock Status -->
+<div>
+<label class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-3 block">Stock Status</label>
+<div class="space-y-2">
+<label class="flex items-center gap-3 group cursor-pointer">
+<div class="w-5 h-5 rounded-md border-2 border-slate-200 flex items-center justify-center group-hover:border-primary transition-all">
+<div class="w-2.5 h-2.5 bg-primary rounded-sm opacity-0 group-has-[:checked]:opacity-100"></div>
+</div>
+<input checked="" class="hidden" type="checkbox"/>
+<span class="text-sm text-slate-600 font-medium">In Stock</span>
+</label>
+<label class="flex items-center gap-3 group cursor-pointer">
+<div class="w-5 h-5 rounded-md border-2 border-slate-200 flex items-center justify-center group-hover:border-primary transition-all">
+<div class="w-2.5 h-2.5 bg-primary rounded-sm opacity-0 group-has-[:checked]:opacity-100"></div>
+</div>
+<input class="hidden" type="checkbox"/>
+<span class="text-sm text-slate-600 font-medium">Low Stock</span>
+</label>
+<label class="flex items-center gap-3 group cursor-pointer">
+<div class="w-5 h-5 rounded-md border-2 border-slate-200 flex items-center justify-center group-hover:border-primary transition-all">
+<div class="w-2.5 h-2.5 bg-primary rounded-sm opacity-0 group-has-[:checked]:opacity-100"></div>
+</div>
+<input class="hidden" type="checkbox"/>
+<span class="text-sm text-slate-600 font-medium">Out of Stock</span>
+</label>
+</div>
+</div>
+<button class="w-full py-3 bg-slate-100 text-slate-900 rounded-xl font-bold text-sm hover:bg-slate-200 active:scale-95 transition-all">
+                                Reset Filters
+                            </button>
+</div>
+</div>
+</aside>
+<!-- Data Table Section -->
+<section class="col-span-12 lg:col-span-9">
+<div class="bg-white rounded-lg shadow-sm border border-slate-100/50 overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-50/50 border-b border-slate-100">
+<th class="px-6 py-4 text-[11px] font-black text-slate-400 uppercase tracking-widest">Bird &amp; Species</th>
+<th class="px-6 py-4 text-[11px] font-black text-slate-400 uppercase tracking-widest">SKU</th>
+<th class="px-6 py-4 text-[11px] font-black text-slate-400 uppercase tracking-widest">Category</th>
+<th class="px-6 py-4 text-[11px] font-black text-slate-400 uppercase tracking-widest text-right">Price</th>
+<th class="px-6 py-4 text-[11px] font-black text-slate-400 uppercase tracking-widest">Status</th>
+<th class="px-6 py-4 text-[11px] font-black text-slate-400 uppercase tracking-widest">Visible</th>
+<th class="px-6 py-4 text-[11px] font-black text-slate-400 uppercase tracking-widest text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-50">
+<!-- Row 1 -->
+<tr class="hover:bg-sky-50/20 transition-colors">
+<td class="px-6 py-5">
+<div class="flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover shadow-sm border border-slate-200" data-alt="Close-up of a stunning Hyacinth Macaw with deep blue feathers and bright yellow eye patches against a soft tropical background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASguXh8MML7qzDoPtN7YwN-nX-y8qcMPFUSyJncyZv4JSV3yaMM8qJmeDRo67D5s8AEpdzcYAjABRwBXSVVQ7mzMawcdiZFy80H_SZa9IzdFBagqkepit47ZheLq3CnAoS9KtRoJREzvnLZf_s6AjDLj259KjZ1Th65mgUn4GMDQhY9cxb-iJJc93Bm519i3dNh4J6W3STGfkfxbxBTISjGbRhNuL1Gi1b0SVZWjyQ7jDfebOyRm2CzcpgNb0NXvtPhvjPYKpzK0VZ"/>
+<div>
+<p class="text-sm font-bold text-slate-900 leading-tight">Hyacinth Macaw</p>
+<p class="text-[11px] italic text-slate-400">Anodorhynchus hyacinthinus</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="text-xs font-mono text-slate-500 bg-slate-100 px-2 py-1 rounded">BH-MAC-001</span>
+</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 bg-sky-50 text-sky-600 rounded-full text-[10px] font-bold uppercase tracking-wider">Parrots</span>
+</td>
+<td class="px-6 py-5 text-right">
+<span class="text-sm font-bold text-slate-900">$8,500</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-tertiary"></div>
+<span class="text-xs font-semibold text-tertiary">In Stock (3 units)</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1.5 hover:bg-sky-50 rounded-lg text-slate-400 hover:text-primary transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="visibility">visibility</span>
+</button>
+<button class="p-1.5 hover:bg-sky-50 rounded-lg text-slate-400 hover:text-primary transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="edit">edit</span>
+</button>
+<button class="p-1.5 hover:bg-red-50 rounded-lg text-slate-400 hover:text-error transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="delete">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-sky-50/20 transition-colors">
+<td class="px-6 py-5">
+<div class="flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover shadow-sm border border-slate-200" data-alt="Elegant Toco Toucan with a massive bright orange beak perched on a mossy branch in a misty rainforest setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl0pOgpYXSOMxL6Ky9iD8EwSMYIfO-_6wG6-jUe3GBKE8ujcHWKT7FARk5HOo8unQwWvfc_GP4oGJ-Dep6uRXN4EkSxgJjjQ_LRytvVnF6AeSIvoN97EFUgBZ1Z5l5Y5KXUleFmWN-oaqyuW7U5gCLxbmp7M7w6PgPapks2QLzRa_XLTrbd_BxXbWWrbG_sDvjXYHn7kko0lDZwdD-c8xKnwUdBUYVmxXldFQmNhml1mC9bu_KpO_Eh0sUVT-QijBYAH_Yd0fgkRuW"/>
+<div>
+<p class="text-sm font-bold text-slate-900 leading-tight">Toco Toucan</p>
+<p class="text-[11px] italic text-slate-400">Ramphastos toco</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="text-xs font-mono text-slate-500 bg-slate-100 px-2 py-1 rounded">BH-TUC-012</span>
+</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 bg-sky-50 text-sky-600 rounded-full text-[10px] font-bold uppercase tracking-wider">Toucans</span>
+</td>
+<td class="px-6 py-5 text-right">
+<span class="text-sm font-bold text-slate-900">$4,200</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-secondary-fixed-dim"></div>
+<span class="text-xs font-semibold text-secondary-fixed-dim">Low Stock (1 unit)</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1.5 hover:bg-sky-50 rounded-lg text-slate-400 hover:text-primary transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="visibility">visibility</span>
+</button>
+<button class="p-1.5 hover:bg-sky-50 rounded-lg text-slate-400 hover:text-primary transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="edit">edit</span>
+</button>
+<button class="p-1.5 hover:bg-red-50 rounded-lg text-slate-400 hover:text-error transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="delete">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-sky-50/20 transition-colors">
+<td class="px-6 py-5">
+<div class="flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover shadow-sm border border-slate-200" data-alt="A grey parrot with intelligent eyes and soft silver plumage against a neutral grey studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxxZAxI4c-UwGbKtNjY4XUqnT5VBaxsbtnn9YaIZhjE9VOcLjShxEpMzxnqxxUO_A_JmwZYXUgz91O-cUvJ69M8zGWA9aB1g1vQ9YJOW5fqOmm5H-rU-wAh73VMif2l6ZFeSj3pQ6zR7uO3OJu376K20cFc3i4ickS7bSflzkFaq7nF2TlB1usydXHFNUWNVkpZ89Gjh-H64yJJVszRM_5b4kfUDAgqkKuWAqh4Qpn6ZTLzJHSegU8vQPVItI_jRe6plMZ1AXnr81m"/>
+<div>
+<p class="text-sm font-bold text-slate-900 leading-tight">African Grey Parrot</p>
+<p class="text-[11px] italic text-slate-400">Psittacus erithacus</p>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<span class="text-xs font-mono text-slate-500 bg-slate-100 px-2 py-1 rounded">BH-AGP-044</span>
+</td>
+<td class="px-6 py-5">
+<span class="px-3 py-1 bg-sky-50 text-sky-600 rounded-full text-[10px] font-bold uppercase tracking-wider">Parrots</span>
+</td>
+<td class="px-6 py-5 text-right">
+<span class="text-sm font-bold text-slate-900">$2,800</span>
+</td>
+<td class="px-6 py-5">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-error"></div>
+<span class="text-xs font-semibold text-error text-opacity-80">Out of Stock</span>
+</div>
+</td>
+<td class="px-6 py-5">
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</td>
+<td class="px-6 py-5 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-1.5 hover:bg-sky-50 rounded-lg text-slate-400 hover:text-primary transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="visibility">visibility</span>
+</button>
+<button class="p-1.5 hover:bg-sky-50 rounded-lg text-slate-400 hover:text-primary transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="edit">edit</span>
+</button>
+<button class="p-1.5 hover:bg-red-50 rounded-lg text-slate-400 hover:text-error transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="delete">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="px-6 py-6 border-t border-slate-100 flex items-center justify-between">
+<span class="text-xs text-slate-500 font-medium tracking-tight">Showing 1 to 10 of 48 entries</span>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 flex items-center justify-center rounded-lg text-slate-400 hover:bg-slate-50 transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg bg-primary text-white text-xs font-bold transition-all">1</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg text-slate-600 hover:bg-slate-50 text-xs font-bold transition-all">2</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg text-slate-600 hover:bg-slate-50 text-xs font-bold transition-all">3</button>
+<span class="px-1 text-slate-300">...</span>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg text-slate-600 hover:bg-slate-50 text-xs font-bold transition-all">5</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg text-slate-400 hover:bg-slate-50 transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Footer -->
+<footer class="w-full py-6 mt-auto border-t border-slate-100 dark:border-slate-800/50 flex justify-between items-center px-8 font-['Inter'] text-xs tracking-wider uppercase opacity-80 hover:opacity-100 transition-all">
+<span class="text-slate-400">© 2024 BirdHaven CMS</span>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-sky-500 hover:underline transition-all" href="#">Documentation</a>
+<a class="text-slate-400 hover:text-sky-500 hover:underline transition-all" href="#">Support</a>
+<span class="text-slate-300">Version 1.2.0</span>
+</div>
+</footer>
+</div>
+</main>
+</body></html>

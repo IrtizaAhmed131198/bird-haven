@@ -1,0 +1,298 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Order Confirmation | Bird Haven</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-container": "#77cefe",
+              "on-background": "#191c1d",
+              "tertiary-fixed": "#b9ecee",
+              outline: "#6f787d",
+              "on-tertiary-fixed": "#002021",
+              "on-secondary-container": "#536b3f",
+              "surface-container-high": "#e7e8e9",
+              "surface-dim": "#d9dadb",
+              "on-tertiary-container": "#27585a",
+              "surface-container-low": "#f3f4f5",
+              "secondary-fixed-dim": "#b3cf9a",
+              "secondary-container": "#cfecb4",
+              "on-secondary-fixed": "#0c2000",
+              "surface-bright": "#f8f9fa",
+              "tertiary-container": "#9bcdcf",
+              "inverse-on-surface": "#f0f1f2",
+              "on-error": "#ffffff",
+              "on-primary-container": "#005778",
+              "on-error-container": "#93000a",
+              "surface-container": "#edeeef",
+              "on-primary": "#ffffff",
+              "on-surface": "#191c1d",
+              "tertiary-fixed-dim": "#9ecfd1",
+              "surface-variant": "#e1e3e4",
+              "on-primary-fixed": "#001e2c",
+              tertiary: "#356668",
+              "secondary-fixed": "#cfecb4",
+              surface: "#f8f9fa",
+              "surface-container-highest": "#e1e3e4",
+              primary: "#00658b",
+              "on-tertiary": "#ffffff",
+              "primary-fixed": "#c4e7ff",
+              "on-surface-variant": "#3f484c",
+              "surface-tint": "#00658b",
+              "surface-container-lowest": "#ffffff",
+              "outline-variant": "#bfc8cd",
+              "on-secondary-fixed-variant": "#364d24",
+              "error-container": "#ffdad6",
+              "primary-fixed-dim": "#7cd0ff",
+              error: "#ba1a1a",
+              "on-tertiary-fixed-variant": "#1a4e50",
+              secondary: "#4d653a",
+              "on-secondary": "#ffffff",
+              "inverse-primary": "#7cd0ff",
+              "on-primary-fixed-variant": "#004c69",
+              "inverse-surface": "#2e3132",
+              background: "#f8f9fa",
+            },
+            fontFamily: {
+              headline: ["Manrope"],
+              body: ["Plus Jakarta Sans"],
+              label: ["Plus Jakarta Sans"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "2rem",
+              xl: "3rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      body {
+        background-color: #f8f9fa;
+        color: #191c1d;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+    </style>
+  </head>
+  <body class="bg-surface font-body p-4 md:p-8">
+    <!-- SUPPRESSED NAV SHELLS AS PER TRANSACTIONAL FOCUS RULE -->
+    <div
+      class="max-w-[700px] mx-auto bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_20px_40px_rgba(25,28,29,0.06)]"
+    >
+      <!-- Header -->
+      <header
+        class="flex items-center justify-between px-8 py-8 bg-white/80 backdrop-blur-xl"
+      >
+        <h1
+          class="text-2xl font-bold font-headline tracking-tighter text-slate-900"
+        >
+          Bird Haven
+        </h1>
+        <div class="text-primary font-semibold text-sm">ORDER #AA-89210</div>
+      </header>
+      <!-- Hero Section -->
+      <div class="relative px-8">
+        <div class="h-64 md:h-80 w-full overflow-hidden rounded-lg">
+          <img
+            alt="vibrant tropical macaw with deep azure and gold plumage resting on a mossy branch in soft dappled forest light"
+            class="w-full h-full object-cover"
+            data-alt="vibrant tropical macaw with deep azure and gold plumage resting on a mossy branch in soft dappled forest light"
+            src="images/order-banner.png"
+          />
+        </div>
+        <div class="mt-8">
+          <h2
+            class="text-4xl font-extrabold font-headline leading-tight text-on-surface tracking-tight"
+          >
+            Your Sanctuary Adoption is Confirmed!
+          </h2>
+          <p class="mt-4 text-on-surface-variant text-lg leading-relaxed">
+            Thank you for joining our mission of ethical avian guardianship.
+            Your contribution directly supports the preservation and care of
+            these majestic species.
+          </p>
+        </div>
+      </div>
+      <!-- Order Summary Bento Grid -->
+      <div class="px-8 mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Items Section -->
+        <div class="bg-surface-container-low p-6 rounded-lg">
+          <h3 class="font-headline font-bold text-slate-900 mb-4">
+            Adoption Details
+          </h3>
+          <div class="space-y-4">
+            <div class="flex justify-between items-center">
+              <div>
+                <p class="font-semibold text-on-surface">
+                  Hyacinth Macaw Adoption
+                </p>
+                <p class="text-xs text-on-surface-variant">
+                  Species Preservation Tier
+                </p>
+              </div>
+              <p class="font-bold text-primary">$450.00</p>
+            </div>
+            <div
+              class="flex justify-between items-center border-t border-outline-variant/15 pt-4"
+            >
+              <p class="text-on-surface-variant">Sanctuary Maintenance Fee</p>
+              <p class="font-semibold text-on-surface">$25.00</p>
+            </div>
+            <div
+              class="flex justify-between items-center border-t border-outline-variant/15 pt-4"
+            >
+              <p class="font-bold text-on-surface text-lg">Total Amount</p>
+              <p class="font-black text-primary text-xl font-headline">
+                $475.00
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Shipping Section -->
+        <div class="bg-surface-container-low p-6 rounded-lg">
+          <h3 class="font-headline font-bold text-slate-900 mb-4">
+            Shipping Address
+          </h3>
+          <div class="text-on-surface-variant space-y-1">
+            <p class="font-semibold text-on-surface">Julian Sterling</p>
+            <p>1248 Aero Avenue</p>
+            <p>Suite 405, Skyview Terrace</p>
+            <p>Seattle, WA 98101</p>
+            <p>United States</p>
+          </div>
+          <div class="mt-6">
+            <p
+              class="text-xs text-on-surface-variant uppercase tracking-widest font-bold"
+            >
+              Estimated Arrival
+            </p>
+            <p class="text-on-surface font-semibold">
+              October 14th - 16th, 2024
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- CTA Action -->
+      <div class="px-8 py-12 flex flex-col items-center">
+        <a
+          class="bg-gradient-to-r from-primary to-primary-container text-white font-bold py-4 px-10 rounded-full shadow-lg hover:translate-y-[-2px] transition-transform duration-300 inline-flex items-center gap-2"
+          href="#"
+        >
+          <span
+            class="material-symbols-outlined"
+            style="font-variation-settings: &quot;FILL&quot; 1"
+            >local_shipping</span
+          >
+          Track My Journey
+        </a>
+        <p class="mt-4 text-xs text-on-surface-variant">
+          Track your companion's care package and digital welcome kit.
+        </p>
+      </div>
+      <!-- Info Block -->
+      <div
+        class="mx-8 mb-12 p-8 bg-secondary-container/30 border border-secondary-container rounded-lg flex gap-4"
+      >
+        <span
+          class="material-symbols-outlined text-secondary"
+          style="font-variation-settings: &quot;FILL&quot; 1"
+          >info</span
+        >
+        <div>
+          <h4 class="font-bold text-secondary text-sm">Next Steps</h4>
+          <p class="text-on-secondary-container text-sm mt-1">
+            Check your inbox for a follow-up email containing your
+            high-resolution digital adoption certificate and live sanctuary
+            webcam access credentials.
+          </p>
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer
+        class="bg-slate-50 border-t border-outline-variant/10 px-8 pt-16 pb-12"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-end">
+          <div>
+            <h3
+              class="text-xl font-black font-headline text-slate-900 tracking-tighter mb-2"
+            >
+              Bird Haven
+            </h3>
+            <p class="text-sm text-slate-500 max-w-xs leading-relaxed">
+              Dedicated to the preservation, documentation, and ethical
+              companionship of rare avian species across the globe.
+            </p>
+          </div>
+          <div class="flex space-x-6 md:justify-end">
+            <a
+              class="text-slate-400 hover:text-primary transition-colors"
+              href="#"
+            >
+              <span class="material-symbols-outlined">public</span>
+            </a>
+            <a
+              class="text-slate-400 hover:text-primary transition-colors"
+              href="#"
+            >
+              <span class="material-symbols-outlined">flutter_dash</span>
+            </a>
+            <a
+              class="text-slate-400 hover:text-primary transition-colors"
+              href="#"
+            >
+              <span class="material-symbols-outlined">camera_indoor</span>
+            </a>
+          </div>
+        </div>
+        <div
+          class="mt-12 flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+          <div
+            class="text-sky-800 font-plus-jakarta text-xs font-semibold tracking-wide"
+          >
+            Ethical Avian Guardianship.
+          </div>
+          <div class="flex gap-6 text-slate-400 text-xs font-medium">
+            <a class="hover:text-primary" href="#">Privacy Policy</a>
+            <a class="hover:text-primary" href="#">Ethical Sourcing</a>
+            <a class="hover:text-primary" href="#">Contact</a>
+          </div>
+        </div>
+        <div
+          class="mt-8 text-center text-[10px] text-slate-400 uppercase tracking-[0.2em]"
+        >
+          © 2024 Bird Haven. All Rights Reserved.
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
