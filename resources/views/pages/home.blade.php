@@ -98,7 +98,7 @@
                 ];
             @endphp
             @foreach($categories->take(6) as $i => $cat)
-                @php $palette = $mobilePalettes[$i % count($mobilePalettes)]; @endphp
+                @php $palette = $mobilePalettes[(int)$i % count($mobilePalettes)]; @endphp
                 <a href="{{ route('shop', ['category' => $cat->id]) }}" class="flex flex-col items-center gap-3 shrink-0">
                     <div class="w-20 h-20 rounded-full {{ $palette['bg'] }} overflow-hidden flex items-center justify-center shadow-sm">
                         @if($cat->image)
